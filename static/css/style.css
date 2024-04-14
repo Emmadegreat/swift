@@ -258,3 +258,14 @@ ol li{
         font-size: 0.8rem;
     }
 }
+
+@media screen and (max-width:310px) {
+    .contact-hero #contact-text{
+        position: absolute !important;
+        left: 40px;
+        font-size: 2rem;
+        top: 270px;
+        color: #198754;
+        font-weight: 700;
+    }
+}
