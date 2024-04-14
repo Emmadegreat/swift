@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,800;1,900&display=swap');
+a{
+    text-decoration: none;
+    color: #198754;
+    font-weight: 500;
+}
+*{
+    font-family:  Poppins;
+    /*padding: 0;
+    margin: 0;
+    box-sizing: border-box;*/
+}
+
+
+.navigation .nav-item .nav-link{
+    color: #198754;
+}
+
+.navigation .nav-item .nav-link:hover{
+    color: #198754;
+}
+
+.logo-img{
+    width: 50px;
+    height: 50px;
+}
+
+
+.navigation .logo:hover{
+    color: #198754;
+}
+
+.navigation a:hover{
+    color: #fff;
+}
+
+.box{
+    color: #198754;
+    background-color: #198754;
+    border-width: 1px solid #198754;
+}
+
+.forgot_password{
+    float: right;
+}
+
+input{
+    height: 46px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"]{
+    margin-bottom: 1rem;
+}
+
+.main{
+    margin-top: 5rem;
+}
+
+.user-data{
+    display: flex;
+    flex-direction: column;
+}
+
+.user-data p{
+    line-height: 1.5;
+}
+
+p{
+    font-size: 1rem;
+}
+
+ol li{
+    font-size: 1.1rem;
+}
+
+.marquee{
+    font-size: 1rem;
+    padding: 0rem 0rem;
+}
+
+.read-more{
+    border-radius: 0.5rem;
+    padding: 0.2rem 0.6rem;
+    color: #198754;
+}
+
+.not-found{
+    margin-bottom: 4rem;
+}
+
+/*============about wrapper==============*/
+.hero{
+    background: url("/static/images/about-us.png") no-repeat center top / cover;
+    width: 100%;
+    height: calc(100vh - 50px);
+    background-attachment: fixed;
+}
+
+.about2{
+    font-size: 2.2rem !important;
+    font-weight: 600;
+    color: #0c1017;
+
+}
+
+
+.about-wrapper{
+    display: flex;
+    justify-content: space-between;
+
+}
+.about-part1{
+    flex-basis: 40%;
+}
+.about-part2{
+    flex-basis: 58%;
+}
+
+.about-part2 p{
+    line-height: 1.8;
+}
+
+
+.about-part2 p{
+    line-height: 1.8;
+}
+
+
+
+.contact-hero{
+    background: url("/static/images/contact-img1.png") no-repeat center center / cover;
+    width: 100%;
+    height: calc(80vh - 50px);
+    background-attachment: scroll !important;
+}
+.contact-hero::after{
+    content: '';
+    position: relative;
+    left: 300px !important;
+}
+.contact-hero #contact-text{
+    position: absolute !important;
+    left: 70px;
+    font-size: 3rem;
+    top: 330px;
+    color: #198754;
+    font-weight: 700;
+}
+
+.whatsapp{
+  position: fixed;
+  right: 0px;
+  left: 90%;
+  bottom: 0;
+  z-index: 1000;
+}
+.whatsapp a img{
+  width: 100px;
+  height: 100px;
+}
+
+.copy-right{
+    color: rgb(158, 160, 161);
+}
+
+/*----Back to top button---
+--------------------------------------------------------------*/
+.back-to-top {
+    position: fixed;
+    right: 15px;
+    left: 15px;
+    bottom: 15px;
+    z-index: 996;
+    background: #198754;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    transition: all 0.4s;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.back-to-top i{
+  font-size: 28px;
+  color: #fff;
+  line-height: 1.5;
+}
+
+.back-to-top:hover {
+  background: #198754;
+  color: #fff;
+}
+.back-to-top.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+@media screen and (max-width:768px){
+    .hero{
+        height: 70vh;
+        background-attachment: scroll;
+    }
+
+    .about-wrapper{
+        flex-direction: column;
+
+    }
+    .contact-hero{
+        height: 70vh;
+        background-attachment: scroll;
+    }
+    .contact-hero #contact-text{
+        position: absolute !important;
+        left: 40px;
+        font-size: 2.5rem;
+        top: 280px;
+        color: #198754;
+        font-weight: 700;
+    }
+
+    .whatsapp{
+        left: 83%;
+    }
+}
+
+@media screen and (max-width:500px){
+    .hero{
+        height: 40vh;
+    }
+    .contact-hero{
+        height: 40vh;
+    }
+
+    .contact-hero #contact-text{
+        position: absolute !important;
+        left: 40px;
+        font-size: 2rem;
+        top: 210px;
+        color: #198754;
+        font-weight: 700;
+    }
+
+    .about2{
+        font-size: 2rem !important;
+        font-weight: 600;
+        color: #0c1017;
+    }
+    .whatsapp{
+        left: 73%;
+    }
+
+    .copy-right{
+        font-size: 0.8rem;
+    }
+}

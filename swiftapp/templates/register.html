@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}<title>Register - SwiftMart</title>{% endblock title %}
+
+{% block content %}<br><br><br>
+
+
+
+    <div class="row justify-content-center border-light mt-8">
+        <div class="col-sm-6 col-lg-5 mt-5">
+            <div class="card bg-light mb-3 border-light">
+                <div class="card-header text-center mb-2 py-3">
+                    <h5 class="text-dark">Staff Registration Form</h5>
+                </div>
+                <div class="card-body">
+                    <form action="" method="POST" novalidate enctype="multipart/form-data" class="px-4 pb-3">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label for="id_firstname">First Name</label>
+                            <input type="text" id="id_firstname" name="first_name" class="form-control mb-2" placeholder="Emmanuel">
+                            {% for error in form.first_name.errors %}
+                                <p class="text-danger">{{ error }}</p>
+                            {% endfor %}
+                        </div>
+                        <div class="form-group py-2">
+                            <label for="id_lastname">Last Name</label>
+                            <input type="text" id="id_lastname" name="last_name" class="form-control" placeholder="Mkpurunchi">
+                            {% for error in form.last_name.errors %}
+                                <p class="text-danger">{{ error }}</p>
+                            {% endfor %}
+                        </div>
+
+                        <div class="form-group py-2">
+                            <label for="id_email">Email</label>
+                            <input type="email" id="id_email" name="email" class="form-control" placeholder="emf0046@gmail.com">
+                            {% for error in form.email.errors %}
+                                <p class="text-danger">{{ error }}</p>
+                            {% endfor %}
+                        </div>
+                        <div class="form-group py-2">
+                            <label for="id_phone">Phone Number</label>
+                            <input type="tel" id="id_phone" name="phone" class="form-control" placeholder="+234+7034534697">
+                            {% for error in form.phone.errors %}
+                                <p class="text-danger">{{ error }}</p>
+                            {% endfor %}
+                        </div>
+                        <div class="form-group py-2">
+                            <label for="id_password1">Password</label>
+                            <input type="password" id="id_password1" name="password1" class="form-control" placeholder="Password1">
+                            {% for error in form.password1.errors %}
+                                <p class="text-danger">{{ error }}</p>
+                            {% endfor %}
+                        </div>
+                        <div class="form-group py-2">
+                            <label for="id_password2">Confirm Password</label>
+                            <input type="password" id="id_password2" name="password2" class="form-control" placeholder="Password again">
+                            {% for error in form.password2.errors %}
+                                <p class="text-danger">{{ error }}</p>
+                            {% endfor %}
+                        </div>
+                        <div class="form-group py-2">
+                            <label for="id_avatar">Profile Image</label>
+                            <input type="file" id="id_avatar" name="avatar" class="form-control">
+                            {% for error in form.avatar.errors %}
+                                <p class="text-danger">{{ error }}</p>
+                            {% endfor %}
+                        </div>
+                        <button type="submit" class="btn btn-success w-100 my-4" width="100%">Register</button>
+                        <span class="">Already have an account <a href="{% url 'login' %}" class="link-success">Login</a></span>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+{% endblock content %}

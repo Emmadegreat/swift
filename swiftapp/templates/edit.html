@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}<title> Edit - SwiftMart</title>{% endblock title %}
+
+{% block content %}
+
+    <br>
+    <div class="row justify-content-center border-light mt-8">
+        <div>
+            {% if messages %}
+
+                <div class="alert alert-success alert-dismissible" role="alert">
+                    {% for message in messages %}
+                        {{ message }}
+                    {% endfor %}
+                    <button class="btn-close alert-link" data-bs-dismiss="alert"></button>
+                </div>
+
+            {% endif %}
+        </div>
+
+        <div class="col-sm-6 col-lg-5">
+            <div class="card bg-light mb-3 border-light">
+                <div class="card-header text-center mb-2  py-3"><h4 class='text-dark'>You can make your changes here</h4></div>
+                <div class="card-body">
+                    <form method="POST" novalidate class="px-4 pb-3">
+                        {% if form.non_field_errors %}
+                            {% for error in form.non_field_errors  %}
+                                <p class="text-danger" style="color:red;">{{error}}</p>
+                            {% endfor %}
+                        {% endif %}
+
+                        {% csrf_token %}
+                        <div class="form-group">
+                            {{ form.as_p}}
+                            {% for error in form.garri.errors %}
+                                <p class="text-danger">{{ error }}</p>
+                            {% endfor %}
+                        </div>
+                        <!--<div class="form-group">
+                            {{ form.garri.label_tag }}
+                            {{ form.garri}}
+                            {% for error in form.garri.errors %}
+                                <p class="text-danger">{{ error }}</p>
+                            {% endfor %}
+                        </div>
+                        <div class="form-group">
+                            {{ form.rice.label_tag }}
+                            {{ form.rice}}
+                            {% for error in form.rice.errors %}
+                                <p class="text-danger">{{ error }}</p>
+                            {% endfor %}
+                        </div>
+
+                        <div class="form-group">
+                            {{ form.honey_beans.label_tag }}
+                            {{ form.honey_beans}}
+                            {% for error in form.honey_beans.errors %}
+                                <p class="text-danger">{{ error }}</p>
+                            {% endfor %}
+                        </div>
+
+                        <div class="form-group">
+                            {{ form.oloyin_beans.label_tag }}
+                            {{ form.oloyin_beans}}
+                            {% for error in form.oloyin_beans.errors %}
+                                <p class="text-danger">{{ error }}</p>
+                            {% endfor %}
+                        </div>
+
+                        <div class="form-group">
+                            {{ form.onions.label_tag }}
+                            {{ form.onions}}
+                            {% for error in form.onions.errors %}
+                                <p class="text-danger">{{ error }}</p>
+                            {% endfor %}
+                        </div>
+
+                        <div class="form-group">
+                            {{ form.spaghetti.label_tag }}
+                            {{ form.spaghetti}}
+                            {% for error in form.spaghetti.errors %}
+                                <p class="text-danger">{{ error }}</p>
+                            {% endfor %}
+                        </div>
+
+                        <div class="form-group">
+                            {{ form.indomie.label_tag }}
+                            {{ form.indomie}}
+                            {% for error in form.indomie.errors %}
+                                <p class="text-danger">{{ error }}</p>
+                            {% endfor %}
+                        </div>
+                        <div class="form-group">
+                            {{ form.duration.label_tag }}
+                            {{ form.duration}}
+                            {% for error in form.duration.errors %}
+                                <p class="text-danger">{{ error }}</p>
+                            {% endfor %}
+                        </div>-->
+
+                        <p class="forgot_password"><a href="{% url 'password_reset' %}"></a></p><br>
+                        <button type="submit" class="btn btn-success w-100 mb-3" width="100%">Update</button>
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}

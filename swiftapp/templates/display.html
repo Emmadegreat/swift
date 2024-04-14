@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+<!--<h2 class="text-center">Staff and their respective ordered food items</h2>
+    {% for user in useritems %}
+
+
+        <div class="container flex flex-column user-data px-4">
+
+            <div>
+                <p class='text-start'><b>{{ user.user.name }}</b></p>
+            </div>
+            <ol>
+                <li class="pt-1 px-4">Garri:  {{ user.garri }} bag</li>
+                <li class="pt-1 px-4">Rice:  {{ user.rice }} bag</li>
+                <li class="pt-1 px-4">Beans:  {{ user.beans }} bag</li>
+                <li class="pt-1 px-4">Onions:  {{ user.onions }} </li>
+                <li class="pt-1 px-4">Spaghetti: {{ user.spaghetti }} </li>
+            </ol>
+
+
+
+
+        </div>
+
+    {% endfor %}-->
+
+    <div class="container py-5">
+
+    <div class="row">
+
+
+
+        <div class="col-sm">
+          <div class="card bg-light mb-3 border-light">
+            <div class="card-header text-center mb-2">
+              <h5 class="text-center">Staff Records</h5>
+            </div>
+              <div class="card-body user-data">
+                  <div class="table-responsive">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <td><b>Name</b></td>
+                          <td><b>Garri</b></td>
+                          <td><b>Rice</b></td>
+                          <td><b>Honey-Beans</b></td>
+                          <td><b>Oloyin-Beans</b></td>
+                          <td><b>Onions</b></td>
+                          <td><b>Spaghetti</b></td>
+                          <td><b>Indomie</b></td>
+                        </tr>
+                      </thead>
+
+                      <tbody class="">
+                        {% for user in useritems %}
+                        <tr>
+
+
+                            <td><b>{{user.user.last_name}}</b></td>
+
+                          <td>{{user.garri }}</td>
+                          <td>{{user.rice}}</td>
+                          <td>{{user.honey_beans}}</td>
+                          <td>{{user.oloyin_beans}}</td>
+                          <td>{{user.onions}}</td>
+                          <td>{{user.spaghetti}}</td>
+                          <td>{{user.indomie}}</td>
+                        </tr>
+                        {% endfor %}
+
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+    </div>
+
+
+{% endblock content %}

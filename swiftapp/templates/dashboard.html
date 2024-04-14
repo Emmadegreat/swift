@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}<title> Dashboard Swiftmart </title>{% endblock title %}
+
+{% block content %}
+
+  <div class="pt-5 pb-5 container">
+    {% if messages %}
+
+      <div class="alert alert-success alert-dismissible" role="alert">
+        {% for message in messages %}
+          {{ message }}
+            {% endfor %}
+              <button class="btn-close alert-link" data-bs-dismiss="alert"></button>
+      </div>
+
+    {% endif %}
+
+
+    <div class="row">
+
+      <div class="col-sm-6 col-lg-4">
+        <div class="card bg-light mb-3 border-light">
+          <div class="card-header text-center mb-2"><h5 class='text-dark'>{{user.first_name}} {{user.last_name}}'s Dashboard</h5></div>
+            <div class="card-body flex flex-column user-data">
+              <img src="{{ user.avatar.url }}" alt="profile-image" width="120px" height="100px" class="rounded-circle">
+              <p class='text-start pt-2'><strong>Email: </strong>{{ user.email }}</p>
+              <p class="pt-2"><strong>Phone: </strong>{{ user.phone }}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-8">
+          <div class="card bg-light mb-3 border-light">
+            <div class="card-header text-center mb-2"><h5 class='text-dark'>
+              My Items</h5>
+            </div>
+
+            {% for item in user_items %}
+
+              <div class="card-body flex flex-column user-data px-4">
+
+                <div class="container">
+
+                  <div class="table-responsive">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th>Items</th>
+                          <th>Quantity</th>
+                          <th><a href="{% url 'edit' item.id %}" class="btn btn-success" style="font-size:0.8rem">Edit</a></th>
+                        </tr>
+                      </thead>
+
+                      <tbody>
+
+                        <tr>
+
+                          <td>Garri</td>
+                          <td>{{ item.garri }}</td>
+                        </tr>
+                        <tr>
+                          <td>Rice</td>
+                          <td>{{item.rice}}</td>
+                        </tr>
+                        <tr>
+                          <td>Honey-Beans</td>
+                          <td>{{item.honey_beans}}</td>
+
+                        </tr>
+                        <tr>
+                          <td>Oloyin-Beans</td>
+                          <td>{{item.oloyin_beans}}</td>
+
+                        </tr>
+                        <tr>
+                          <td>Onions</td>
+                          <td>{{item.onions}}</td>
+
+                        </tr>
+                        <tr>
+                          <td>Spaghetti</td>
+                          <td>{{item.spaghetti}}</td>
+                        </tr>
+                        <tr>
+                          <td>Indomie</td>
+                          <td>{{item.indomie}}</td>
+                        </tr>
+
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+            {% endfor %}
+
+            <div class="card-footer">
+                <p>Back to <a class="text-success" href="{% url 'home'%}"> Home</a></p>
+              </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+{% endblock content %}
+
