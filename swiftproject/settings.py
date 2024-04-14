@@ -32,9 +32,11 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["localhost", "127.0.0.1", "swiftmart.up.railway.app"]
+
+CSRF_TRUSTED_ORIGINS = ["https://swiftmart.up.railway.app"]
 
 
 # Application definition
