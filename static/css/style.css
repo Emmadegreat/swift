@@ -144,7 +144,7 @@ ol li{
 .contact-hero #contact-text{
     position: absolute !important;
     left: 70px;
-    font-size: 3rem;
+    font-size: 2.7rem;
     top: 330px;
     color: #198754;
     font-weight: 700;
@@ -233,14 +233,14 @@ ol li{
         height: 40vh;
     }
     .contact-hero{
-        height: 40vh;
+        height: 38vh;
     }
 
     .contact-hero #contact-text{
         position: absolute !important;
         left: 40px;
         font-size: 2rem;
-        top: 210px;
+        top: 260px;
         color: #198754;
         font-weight: 700;
     }
@@ -259,12 +259,12 @@ ol li{
     }
 }
 
-@media screen and (max-width:310px) {
+/*@media screen and (max-width:310px) {
     .contact-hero #contact-text{
         position: absolute !important;
         left: 40px;
-        font-size: 2rem;
-        top: 270px;
+        font-size: 1.8rem;
+        bottom: 270px;
         color: #198754;
         font-weight: 700;
     }
