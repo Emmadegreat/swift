@@ -75,7 +75,10 @@ class UserItemForm(forms.ModelForm):
     onions_list = [('',''),('1 pent','1 pent'), ('2 pent','2 pent'), ('Quarter bag','Quarter bag'), ('Half bag','Half bag'), ('1-bag','1-bag'),('No','No')]
     spaghetti_list = [('',''),('Half Carton','Half-Carton'), ('1-Carton','1-Carton'), ('2-Cartons','2-Cartons'), ('3-Cartons','3-Cartons'),('No','No')]
     indomie_list = [('',''),('Half Carton','Half-Carton'), ('1-Carton','1-Carton'), ('2-Cartons','2-Cartons'), ('3-Cartons','3-Cartons'),('No','No')]
+    yam_list = [('', ''), ('1', '1'), ('2', '2'), ('3', '3'), ('4','4'), ('5', '5'), ('6', '6'), ('7','7'), ('8', '8'),('9', '9'), ('10', '10'), ('11','11'), ('12','12'), ('13','13'), ('14','14')]
     duration_list = [('',''),('1st Quarter','1st Quarter'), ('2nd Quarter','2nd Quarter'), ('3rd Quarter','3rd Quarter'), ('4th Quarter','4th Quarter')]
+
+
 
     garri = forms.ChoiceField(label='Garri', choices=garri_list, widget=forms.Select(attrs={'class': 'form-control'}))
     rice = forms.ChoiceField(label="Rice", choices=rice_list, widget=forms.Select(attrs={'class':'form-control'}))
@@ -84,10 +87,11 @@ class UserItemForm(forms.ModelForm):
     onions = forms.ChoiceField(label="Onions", choices=onions_list, widget=forms.Select(attrs={'class':'form-control'}))
     spaghetti = forms.ChoiceField(label="Spaghetti",choices=spaghetti_list, widget=forms.Select(attrs={'class':'form-control'}))
     indomie = forms.ChoiceField(label="Indomie", choices=indomie_list, widget=forms.Select(attrs={'class':'form-control'}))
+    yam_tubers = forms.ChoiceField(label="Yam-tubers", choices=yam_list, widget=forms.Select(attrs={'class': 'form-control'}))
     duration = forms.ChoiceField(label="Duration",choices=duration_list, widget=forms.Select(attrs={'class':'form-control'}))
 
     #user = forms.IntegerField(widget=forms.HiddenInput())
 
     class Meta:
         model = UserItems
-        fields =('garri', 'rice', 'honey_beans', 'oloyin_beans', 'onions', 'spaghetti','indomie', 'duration')
+        fields =('yam_tubers', 'garri', 'rice', 'honey_beans', 'oloyin_beans', 'onions', 'spaghetti','indomie', 'duration')
