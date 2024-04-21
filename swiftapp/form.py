@@ -68,14 +68,14 @@ class LoginForm(forms.ModelForm):
 
 class UserItemForm(forms.ModelForm):
 
-    garri_list = [('',''),('Quarter','Quarter'), ('Half','Half'),('1-bag','1-bag'),('No','No')]
+    garri_list = [('',''),('Quarter(0.25)','Quarter(0.25)'), ('Half(0.5)','Half(0.5)'),('1-bag','1-bag'),('No','No')]
     rice_list = [('',''),('Quarter','Quarter'), ('Half','Half'),('1-bag','1-bag'),('No','No')]
-    honey_beans_list = [('',''),('Quarter','Quarter'), ('Half','Half'),('1-bag','1-bag'),('No','No')]
-    oloyin_beans_list = [('',''),('Quarter','Quarter'), ('Half','Half'),('1-bag','1-bag'),('No','No')]
-    onions_list = [('',''),('1 pent','1 pent'), ('2 pent','2 pent'), ('Quarter bag','Quarter bag'), ('Half bag','Half bag'), ('1-bag','1-bag'),('No','No')]
-    spaghetti_list = [('',''),('Half Carton','Half-Carton'), ('1-Carton','1-Carton'), ('2-Cartons','2-Cartons'), ('3-Cartons','3-Cartons'),('No','No')]
+    honey_beans_list = [('',''),('Quarter(0.25)','Quarter(0.25)'), ('Half(0.5)','Half(0.5)'),('1-bag','1-bag'),('No','No')]
+    oloyin_beans_list = [('',''),('Quarter(0.25)','Quarter(0.25)'), ('Half(0.5)','Half(0.5)'),('1-bag','1-bag'),('No','No')]
+    onions_list = [('',''),('Quarter(0.25)','Quarter(0.25)'), ('Half(0.5)','Half(0.5)'),('3-quarter(0.75)','3-quarter(0.75)'),('No','No')]
+    spaghetti_list = [('',''),('Half-Carton','Half-Carton'), ('1-Carton','1-Carton'), ('2-Cartons','2-Cartons'), ('3-Cartons','3-Cartons'),('No','No')]
     indomie_list = [('',''),('Half Carton','Half-Carton'), ('1-Carton','1-Carton'), ('2-Cartons','2-Cartons'), ('3-Cartons','3-Cartons'),('No','No')]
-    yam_list = [('', ''), ('1', '1'), ('2', '2'), ('3', '3'), ('4','4'), ('5', '5'), ('6', '6'), ('7','7'), ('8', '8'),('9', '9'), ('10', '10'), ('11','11'), ('12','12'), ('13','13'), ('14','14')]
+    yam_list = [('', ''), ('1', '1'), ('2', '2'), ('3', '3'), ('4','4'), ('5', '5'), ('6', '6'), ('7','7'), ('8', '8'),('9', '9'), ('10', '10'), ('11','11'), ('12','12'), ('13','13'), ('No','No')]
     duration_list = [('',''),('1st Quarter','1st Quarter'), ('2nd Quarter','2nd Quarter'), ('3rd Quarter','3rd Quarter'), ('4th Quarter','4th Quarter')]
 
 
@@ -85,7 +85,8 @@ class UserItemForm(forms.ModelForm):
     honey_beans = forms.ChoiceField(label="Honey-Beans", choices=honey_beans_list, widget=forms.Select(attrs={'class':'form-control'}))
     oloyin_beans = forms.ChoiceField(label="Oloyin-Beans", choices=oloyin_beans_list, widget=forms.Select(attrs={'class':'form-control'}))
     onions = forms.ChoiceField(label="Onions", choices=onions_list, widget=forms.Select(attrs={'class':'form-control'}))
-    spaghetti = forms.ChoiceField(label="Spaghetti",choices=spaghetti_list, widget=forms.Select(attrs={'class':'form-control'}))
+    aunty_b_spag = forms.ChoiceField(label="Aunty_B_Spag",choices=spaghetti_list, widget=forms.Select(attrs={'class':'form-control'}))
+    g_penny_spag = forms.ChoiceField(label="Aunty_B_Spag",choices=spaghetti_list, widget=forms.Select(attrs={'class':'form-control'}))
     indomie = forms.ChoiceField(label="Indomie", choices=indomie_list, widget=forms.Select(attrs={'class':'form-control'}))
     yam_tubers = forms.ChoiceField(label="Yam-tubers", choices=yam_list, widget=forms.Select(attrs={'class': 'form-control'}))
     duration = forms.ChoiceField(label="Duration",choices=duration_list, widget=forms.Select(attrs={'class':'form-control'}))
@@ -94,4 +95,4 @@ class UserItemForm(forms.ModelForm):
 
     class Meta:
         model = UserItems
-        fields =('yam_tubers', 'garri', 'rice', 'honey_beans', 'oloyin_beans', 'onions', 'spaghetti','indomie', 'duration')
+        fields =('yam_tubers', 'garri', 'rice', 'honey_beans', 'oloyin_beans', 'onions', 'aunty_b_spag','g_penny_spag', 'indomie', 'duration')
