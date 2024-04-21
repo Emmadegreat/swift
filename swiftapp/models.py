@@ -69,7 +69,7 @@ class UserItems(models.Model):
     oloyin_beans_list = [('',''),('Quarter(0.25)','Quarter(0.25)'), ('Half(0.5)','Half(0.5)'),('1-bag','1-bag'),('No','No')]
     onions_list = [('',''),('Quarter(0.25)','Quarter(0.25)'), ('Half(0.5)','Half(0.5)'),('3-quarter(0.75)','3-quarter(0.75)'),('No','No')]
     spaghetti_list = [('',''),('Half-Carton','Half-Carton'), ('1-Carton','1-Carton'), ('2-Cartons','2-Cartons'), ('3-Cartons','3-Cartons'),('No','No')]
-    indomie_list = [('',''),('Half Carton','Half-Carton'), ('1-Carton','1-Carton'), ('2-Cartons','2-Cartons'), ('3-Cartons','3-Cartons'),('No','No')]
+    noodle_list = [('',''),('1-carton','1-Carton'), ('1-Carton','1-Carton'), ('2-Cartons','2-Cartons'), ('3-Cartons','3-Cartons'),('No','No')]
     yam_list = [('', ''), ('1', '1'), ('2', '2'), ('3', '3'), ('4','4'), ('5', '5'), ('6', '6'), ('7','7'), ('8', '8'),('9', '9'), ('10', '10'), ('11','11'), ('12','12'), ('13','13'), ('No','No')]
     duration_list = [('',''),('1st Quarter','1st Quarter'), ('2nd Quarter','2nd Quarter'), ('3rd Quarter','3rd Quarter'), ('4th Quarter','4th Quarter')]
 
@@ -81,7 +81,8 @@ class UserItems(models.Model):
     onions = models.CharField(choices=onions_list, null=True, blank=True, max_length=40)
     aunty_b_spag = models.CharField(choices=spaghetti_list, null=True, blank=True, max_length=40)
     g_penny_spag = models.CharField(choices=spaghetti_list, null=True, blank=True, max_length=40)
-    indomie = models.CharField(choices=indomie_list, null=True, blank=True, max_length=40)
+    oriental_noodles = models.CharField(choices=noodle_list, null=True, blank=True, max_length=40)
+    chikki_noodles = models.CharField(choices=noodle_list, null=True, blank=True, max_length=40)
     yam_tubers = models.CharField(choices=yam_list, null=True, blank=True, max_length=40)
     duration = models.CharField(choices=duration_list, null=True, blank=True, max_length=40)
 
@@ -89,6 +90,6 @@ class UserItems(models.Model):
         return (
             f"{self.user.email}- Yam: {self.yam_tubers}, Garri: {self.garri}, Rice: {self.rice},"
             f"Honey_beans: {self.honey_beans}, Oloyin_beans: {self.oloyin_beans}, Onions: {self.onions},"
-            f"Aunty_B_Spag: {self.aunty_b_spag}, G_penny_Spag: {self.g_penny_spag}, Indomie: {self.indomie},"
-            f"Duration: {self.duration}"
+            f"Aunty_B_Spag: {self.aunty_b_spag}, G_penny_Spag: {self.g_penny_spag}, Oriental: {self.oriental_noodles},"
+            f"Chikki: {self.chikki_noodles}, Duration: {self.duration}"
         )
