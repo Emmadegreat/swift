@@ -141,7 +141,7 @@ def export_excel(request):
     response['Content-Disposition'] = 'attachment; filename=UserItems' + str(datetime.datetime.now())+'.xls'
     wb = xlwt.Workbook(encoding='utf-8')
     ws = wb.add_sheet('UserItems')
-    row_num = 0
+    #row_num = 0
 
     columns = ['name', 'garri', 'rice', 'honey-beans', 'oloyin-beans', 'onions', 'aunty_b_spag', 'g_penny_spag', 'Noodles(oriental)','Noodles(chikki)','yam']
 
@@ -149,9 +149,9 @@ def export_excel(request):
     font_style.font.bold = True
 
     for column in range(len(columns)):
-        ws.write(row_num, column, columns[column], font_style)
+        ws.write(0, column, columns[column], font_style)
 
-    #font_style = xlwt.XFStyle()
+    font_style = xlwt.XFStyle()
     #rows = UserItems.objects.filter(request.user).values_list('name', 'garri', 'rice', 'honey-beans', 'oloyin-beans', 'onions', 'aunty_b_spag', 'g_penny_spag', 'Noodles(oriental)','Noodles(chikki)','yam')
 
     useritems = UserItems.objects.all()
@@ -162,7 +162,7 @@ def export_excel(request):
         for column in range(len(rows)):
             ws.write(row_num, column, str(row[column]), font_style)'''
 
-    #row_num = 0
+    row_num = 0
     for user in useritems:
         row_num += 1
         ws.write(row_num, 0, user.user.last_name, font_style)
