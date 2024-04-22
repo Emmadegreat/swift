@@ -136,7 +136,7 @@ def display(request):
     return render(request,'display.html', {"useritems": useritems})
 
 
-'''def export_excel(request):
+def export_excel(request):
     response = HttpResponse(content_type='application/ms-excel')
     response['Content-Disposition'] = 'attachment; filename=UserItems' + str(datetime.datetime.now())+'.xls'
     wb = xlwt.Workbook(encoding='utf-8')
@@ -179,7 +179,7 @@ def display(request):
         ws.write(row_num, 11, user.duration, font_style)
 
     wb.save(response)
-    return response'''
+    return response
 
 
 
