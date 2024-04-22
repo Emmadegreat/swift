@@ -33,7 +33,7 @@
                         {% csrf_token %}
                         <div class="form-group">
                             {{ form.as_p}}
-                            {% for error in form.garri.errors %}
+                            {% for error in form.white_garri.errors %}
                                 <p class="text-danger">{{ error }}</p>
                             {% endfor %}
                         </div>
