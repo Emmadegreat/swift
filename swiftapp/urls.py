@@ -14,7 +14,7 @@ urlpatterns = [
     path("display/", views.display, name="display"),
     path('items/', views.items, name="items"),
     path('edit/<int:id>', views.edit, name="edit"),
-    path('export-excel', views.export_excel, name="export-excel"),
+    #path('export-excel', views.export_excel, name="export-excel"),
 
     path("password_reset/", auth_views.PasswordResetView.as_view(template_name="password_reset.html"), name="password_reset"),
 

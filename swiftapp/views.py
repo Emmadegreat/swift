@@ -136,7 +136,7 @@ def display(request):
     return render(request,'display.html', {"useritems": useritems})
 
 
-def export_excel(request):
+'''def export_excel(request):
     response = HttpResponse(content_type='application/ms-excel')
     response['Content-Disposition'] = 'attachment; filename=UserItems' + str(datetime.datetime.now())+'.xls'
     wb = xlwt.Workbook(encoding='utf-8')
@@ -156,11 +156,11 @@ def export_excel(request):
 
     useritems = UserItems.objects.all()
 
-    '''for row in rows:
-        row_num +=1
+    #for row in rows:
+        #row_num +=1
 
-        for column in range(len(rows)):
-            ws.write(row_num, column, str(row[column]), font_style)'''
+        #for column in range(len(rows)):
+            #ws.write(row_num, column, str(row[column]), font_style)
 
     row_num = 0
     for user in useritems:
@@ -179,7 +179,7 @@ def export_excel(request):
         ws.write(row_num, 11, user.duration, font_style)
 
     wb.save(response)
-    return response
+    return response'''
 
 
 
