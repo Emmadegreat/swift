@@ -63,21 +63,22 @@ class SwiftUser(AbstractUser):
 
 class UserItems(models.Model):
 
-    garri_list = [('',''),('Quarter(0.25)','Quarter(0.25)'), ('Half(0.5)','Half(0.5)'),('1-bag','1-bag'),('No','No')]
-    rice_list = [('',''),('Quarter','Quarter'), ('Half','Half'),('1-bag','1-bag'),('No','No')]
-    honey_beans_list = [('',''),('Quarter(0.25)','Quarter(0.25)'), ('Half(0.5)','Half(0.5)'),('1-bag','1-bag'),('No','No')]
-    oloyin_beans_list = [('',''),('Quarter(0.25)','Quarter(0.25)'), ('Half(0.5)','Half(0.5)'),('1-bag','1-bag'),('No','No')]
-    onions_list = [('',''),('Quarter(0.25)','Quarter(0.25)'), ('Half(0.5)','Half(0.5)'),('3-quarter(0.75)','3-quarter(0.75)'),('No','No')]
-    spaghetti_list = [('',''),('Half-Carton','Half-Carton'), ('1-Carton','1-Carton'), ('2-Cartons','2-Cartons'), ('3-Cartons','3-Cartons'),('No','No')]
-    noodle_list = [('',''),('1-carton','1-Carton'), ('1-Carton','1-Carton'), ('2-Cartons','2-Cartons'), ('3-Cartons','3-Cartons'),('No','No')]
+    garri_list = [('',''),('Quarter(0.25)','Quarter(0.25)'), ('Half(0.5)','Half(0.5)'),('1-bag','1-bag'),('2-bag','2-bag'),('No','No')]
+    rice_list = [('',''),('Quarter(0.25)','Quarter(0.25)'), ('Half(0.5)','Half(0.5)'),('1-bag','1-bag'),('2-bags','2-bags'),('No','No')]
+    beans_list = [('',''),('Quarter(0.25)','Quarter(0.25)'), ('Half(0.5)','Half(0.5)'),('1-bag','1-bag'),('No','No')]
+    onions_list = [('',''),('Quarter(0.25)','Quarter(0.25)'), ('Half(0.5)','Half(0.5)'),('3-quarter(0.75)','3-quarter(0.75)'),('1', '1'), ('No','No')]
+    spaghetti_list = [('',''),('Half(0.5)','Half(0.5)'), ('1-Carton','1-Carton'), ('2-Cartons','2-Cartons'), ('3-Cartons','3-Cartons'),('No','No')]
+    noodle_list = [('',''),('1-carton','1-Carton'), ('2-Carton','2-Carton'),('3-Cartons','3-Cartons'),('No','No')]
     yam_list = [('', ''), ('1', '1'), ('2', '2'), ('3', '3'), ('4','4'), ('5', '5'), ('6', '6'), ('7','7'), ('8', '8'),('9', '9'), ('10', '10'), ('11','11'), ('12','12'), ('13','13'), ('No','No')]
     duration_list = [('',''),('1st Quarter','1st Quarter'), ('2nd Quarter','2nd Quarter'), ('3rd Quarter','3rd Quarter'), ('4th Quarter','4th Quarter')]
 
     user = models.OneToOneField('SwiftUser', on_delete=models.CASCADE)
-    garri = models.CharField(choices=garri_list, null=True, blank=True, max_length=40)
-    rice = models.CharField(choices=rice_list, null=True, blank=True, max_length=40)
-    honey_beans = models.CharField(choices=honey_beans_list, null=True, blank=True, max_length=40)
-    oloyin_beans = models.CharField(choices=oloyin_beans_list, null=True, blank=True, max_length=40)
+    white_garri = models.CharField(choices=garri_list, null=True, blank=True, max_length=40)
+    yellow_garri = models.CharField(choices=garri_list, null=True, blank=True, max_length=40)
+    nig_rice = models.CharField(choices=rice_list, null=True, blank=True, max_length=40)
+    foreign_rice = models.CharField(choices=rice_list, null=True, blank=True, max_length=40)
+    honey_beans = models.CharField(choices=beans_list, null=True, blank=True, max_length=40)
+    drum_beans = models.CharField(choices=beans_list, null=True, blank=True, max_length=40)
     onions = models.CharField(choices=onions_list, null=True, blank=True, max_length=40)
     aunty_b_spag = models.CharField(choices=spaghetti_list, null=True, blank=True, max_length=40)
     g_penny_spag = models.CharField(choices=spaghetti_list, null=True, blank=True, max_length=40)
@@ -88,8 +89,8 @@ class UserItems(models.Model):
 
     def __str__(self):
         return (
-            f"{self.user.email}- Yam: {self.yam_tubers}, Garri: {self.garri}, Rice: {self.rice},"
-            f"Honey_beans: {self.honey_beans}, Oloyin_beans: {self.oloyin_beans}, Onions: {self.onions},"
+            f"{self.user.email}- Yam: {self.yam_tubers}, White_garri: {self.white_garri}, Yellow_garri: {self.yellow_garri}, Nig_rice: {self.nig_rice}, Foreign_rice: {self.foreign_rice},"
+            f"Honey_beans: {self.honey_beans}, Drum_beans: {self.drum_beans}, Onions: {self.onions},"
             f"Aunty_B_Spag: {self.aunty_b_spag}, G_penny_Spag: {self.g_penny_spag}, Oriental: {self.oriental_noodles},"
             f"Chikki: {self.chikki_noodles}, Duration: {self.duration}"
         )

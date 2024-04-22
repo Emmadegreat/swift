@@ -68,22 +68,23 @@ class LoginForm(forms.ModelForm):
 
 class UserItemForm(forms.ModelForm):
 
-    garri_list = [('',''),('Quarter(0.25)','Quarter(0.25)'), ('Half(0.5)','Half(0.5)'),('1-bag','1-bag'),('No','No')]
-    rice_list = [('',''),('Quarter','Quarter'), ('Half','Half'),('1-bag','1-bag'),('No','No')]
-    honey_beans_list = [('',''),('Quarter(0.25)','Quarter(0.25)'), ('Half(0.5)','Half(0.5)'),('1-bag','1-bag'),('No','No')]
-    oloyin_beans_list = [('',''),('Quarter(0.25)','Quarter(0.25)'), ('Half(0.5)','Half(0.5)'),('1-bag','1-bag'),('No','No')]
-    onions_list = [('',''),('Quarter(0.25)','Quarter(0.25)'), ('Half(0.5)','Half(0.5)'),('3-quarter(0.75)','3-quarter(0.75)'),('No','No')]
-    spaghetti_list = [('',''),('Half-Carton','Half-Carton'), ('1-Carton','1-Carton'), ('2-Cartons','2-Cartons'), ('3-Cartons','3-Cartons'),('No','No')]
-    noodle_list = [('',''),('1-carton','1-Carton'), ('1-Carton','1-Carton'), ('2-Cartons','2-Cartons'), ('3-Cartons','3-Cartons'),('No','No')]
+    garri_list = [('',''),('Quarter(0.25)','Quarter(0.25)'), ('Half(0.5)','Half(0.5)'),('1-bag','1-bag'),('2-bag','2-bag'),('No','No')]
+    rice_list = [('',''),('Quarter(0.25)','Quarter(0.25)'), ('Half(0.5)','Half(0.5)'),('1-bag','1-bag'),('2-bags','2-bags'),('No','No')]
+    beans_list = [('',''),('Quarter(0.25)','Quarter(0.25)'), ('Half(0.5)','Half(0.5)'),('1-bag','1-bag'),('No','No')]
+    onions_list = [('',''),('Quarter(0.25)','Quarter(0.25)'), ('Half(0.5)','Half(0.5)'),('3-quarter(0.75)','3-quarter(0.75)'),('1', '1'), ('No','No')]
+    spaghetti_list = [('',''),('Half(0.5)','Half(0.5)'), ('1-Carton','1-Carton'), ('2-Cartons','2-Cartons'), ('3-Cartons','3-Cartons'),('No','No')]
+    noodle_list = [('',''),('1-carton','1-Carton'), ('2-Carton','2-Carton'),('3-Cartons','3-Cartons'),('No','No')]
     yam_list = [('', ''), ('1', '1'), ('2', '2'), ('3', '3'), ('4','4'), ('5', '5'), ('6', '6'), ('7','7'), ('8', '8'),('9', '9'), ('10', '10'), ('11','11'), ('12','12'), ('13','13'), ('No','No')]
     duration_list = [('',''),('1st Quarter','1st Quarter'), ('2nd Quarter','2nd Quarter'), ('3rd Quarter','3rd Quarter'), ('4th Quarter','4th Quarter')]
 
 
 
-    garri = forms.ChoiceField(label='Garri', choices=garri_list, widget=forms.Select(attrs={'class': 'form-control'}))
-    rice = forms.ChoiceField(label="Rice", choices=rice_list, widget=forms.Select(attrs={'class':'form-control'}))
-    honey_beans = forms.ChoiceField(label="Honey-Beans", choices=honey_beans_list, widget=forms.Select(attrs={'class':'form-control'}))
-    oloyin_beans = forms.ChoiceField(label="Oloyin-Beans", choices=oloyin_beans_list, widget=forms.Select(attrs={'class':'form-control'}))
+    white_garri = forms.ChoiceField(label='White-garri', choices=garri_list, widget=forms.Select(attrs={'class': 'form-control'}))
+    yellow_garri = forms.ChoiceField(label='White-garri', choices=garri_list, widget=forms.Select(attrs={'class': 'form-control'}))
+    nig_rice = forms.ChoiceField(label="Rice", choices=rice_list, widget=forms.Select(attrs={'class':'form-control'}))
+    foreign_rice = forms.ChoiceField(label="Rice", choices=rice_list, widget=forms.Select(attrs={'class':'form-control'}))
+    honey_beans = forms.ChoiceField(label="Honey-Beans", choices=beans_list, widget=forms.Select(attrs={'class':'form-control'}))
+    drum_beans = forms.ChoiceField(label="Oloyin-Beans", choices=beans_list, widget=forms.Select(attrs={'class':'form-control'}))
     onions = forms.ChoiceField(label="Onions", choices=onions_list, widget=forms.Select(attrs={'class':'form-control'}))
     aunty_b_spag = forms.ChoiceField(label="Aunty_B_Spag",choices=spaghetti_list, widget=forms.Select(attrs={'class':'form-control'}))
     g_penny_spag = forms.ChoiceField(label="Aunty_B_Spag",choices=spaghetti_list, widget=forms.Select(attrs={'class':'form-control'}))
@@ -96,6 +97,6 @@ class UserItemForm(forms.ModelForm):
 
     class Meta:
         model = UserItems
-        fields = ('yam_tubers', 'garri', 'rice', 'honey_beans', 'oloyin_beans', 'onions',
+        fields = ('yam_tubers', 'white_garri', 'yellow_garri', 'nig_rice', 'foreign_rice', 'honey_beans', 'drum_beans', 'onions',
                  'aunty_b_spag','g_penny_spag', 'oriental_noodles', 'chikki_noodles', 'duration'
                 )
