@@ -84,13 +84,13 @@ class UserItemForm(forms.ModelForm):
 
 
     white_garri = forms.ChoiceField(label='White-garri', choices=garri_list, widget=forms.Select(attrs={'class': 'form-control'}))
-    yellow_garri = forms.ChoiceField(label='White-garri', choices=garri_list, widget=forms.Select(attrs={'class': 'form-control'}))
+    yellow_garri = forms.ChoiceField(label='Yellow-garri', choices=garri_list, widget=forms.Select(attrs={'class': 'form-control'}))
     nig_rice = forms.ChoiceField(label="Nig-rice", choices=rice_list, widget=forms.Select(attrs={'class':'form-control'}))
     foreign_rice = forms.ChoiceField(label="foreign-rice", choices=rice_list, widget=forms.Select(attrs={'class':'form-control'}))
     honey_beans = forms.ChoiceField(label="Honey-beans", choices=beans_list, widget=forms.Select(attrs={'class':'form-control'}))
-    drum_beans = forms.ChoiceField(label="Oloyin-beans", choices=beans_list, widget=forms.Select(attrs={'class':'form-control'}))
+    drum_beans = forms.ChoiceField(label="Drum-beans", choices=beans_list, widget=forms.Select(attrs={'class':'form-control'}))
     onions = forms.ChoiceField(label="Onions", choices=onions_list, widget=forms.Select(attrs={'class':'form-control'}))
-    aunty_b_spag = forms.ChoiceField(label="Aunty-B-spag",choices=spaghetti_list, widget=forms.Select(attrs={'class':'form-control'}))
+    aunty_b_spag = forms.ChoiceField(label="Aunty-b-spag",choices=spaghetti_list, widget=forms.Select(attrs={'class':'form-control'}))
     g_penny_spag = forms.ChoiceField(label="G-penny-spag",choices=spaghetti_list, widget=forms.Select(attrs={'class':'form-control'}))
     oriental_noodles = forms.ChoiceField(label="Oriental-noodles", choices=noodle_list, widget=forms.Select(attrs={'class':'form-control'}))
     chikki_noodles = forms.ChoiceField(label="Chikki-noodles", choices=noodle_list, widget=forms.Select(attrs={'class':'form-control'}))

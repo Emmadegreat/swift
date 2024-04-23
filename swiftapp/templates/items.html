@@ -31,23 +31,38 @@
                         {% endif %}
 
                         {% csrf_token %}
-                        <!--<div class="form-group">
-                            {{ form.as_p}}
-                            {% for error in form.garri.errors %}
-                                <p class="text-danger">{{ error }}</p>
-                            {% endfor %}
-                        </div>-->
                         <div class="form-group">
-                            {{ form.garri.label_tag }}
-                            {{ form.garri}}
-                            {% for error in form.garri.errors %}
+                             <!--{{ form.as_p}}
+                           {% for error in form.errors %}
+                                <p class="text-danger">{{ error }}</p>
+                            {% endfor %}-->
+                        </div>
+                        <div class="form-group">
+                            {{ form.white_garri.label_tag }}
+                            {{ form.white_garri}}
+                            {% for error in form.white_garri.errors %}
                                 <p class="text-danger">{{ error }}</p>
                             {% endfor %}
                         </div>
                         <div class="form-group">
-                            {{ form.rice.label_tag }}
-                            {{ form.rice}}
-                            {% for error in form.rice.errors %}
+                            {{ form.yellow_garri.label_tag }}
+                            {{ form.yellow_garri}}
+                            {% for error in form.yellow_garri.errors %}
+                                <p class="text-danger">{{ error }}</p>
+                            {% endfor %}
+                        </div>
+                        <div class="form-group">
+                            {{ form.nig_rice.label_tag }}
+                            {{ form.nig_rice}}
+                            {% for error in form.nig_rice.errors %}
+                                <p class="text-danger">{{ error }}</p>
+                            {% endfor %}
+                        </div>
+
+                        <div class="form-group">
+                            {{ form.foreign_rice.label_tag }}
+                            {{ form.foreign_rice}}
+                            {% for error in form.foreign_rice.errors %}
                                 <p class="text-danger">{{ error }}</p>
                             {% endfor %}
                         </div>
@@ -61,9 +76,9 @@
                         </div>
 
                         <div class="form-group">
-                            {{ form.oloyin_beans.label_tag }}
-                            {{ form.oloyin_beans}}
-                            {% for error in form.oloyin_beans.errors %}
+                            {{ form.drum_beans.label_tag }}
+                            {{ form.drum_beans}}
+                            {% for error in form.drum_beans.errors %}
                                 <p class="text-danger">{{ error }}</p>
                             {% endfor %}
                         </div>
@@ -77,17 +92,66 @@
                         </div>
 
                         <div class="form-group">
-                            {{ form.spaghetti.label_tag }}
-                            {{ form.spaghetti}}
-                            {% for error in form.spaghetti.errors %}
+                            {{ form.aunty_b_spag.label_tag }}
+                            {{ form.aunty_b_spag}}
+                            {% for error in form.aunty_b_spag.errors %}
+                                <p class="text-danger">{{ error }}</p>
+                            {% endfor %}
+                        </div>
+                        <div class="form-group">
+                            {{ form.g_penny_spag.label_tag }}
+                            {{ form.g_penny_spag}}
+                            {% for error in form.g_penny_spag.errors %}
                                 <p class="text-danger">{{ error }}</p>
                             {% endfor %}
                         </div>
 
                         <div class="form-group">
-                            {{ form.indomie.label_tag }}
-                            {{ form.indomie}}
-                            {% for error in form.indomie.errors %}
+                            {{ form.oriental_noodles.label_tag }}
+                            {{ form.oriental_noodles}}
+                            {% for error in form.oriental_noodles.errors %}
+                                <p class="text-danger">{{ error }}</p>
+                            {% endfor %}
+                        </div>
+                        <div class="form-group">
+                            {{ form.chikki_noodles.label_tag }}
+                            {{ form.chikki_noodles}}
+                            {% for error in form.chikki_noodles.errors %}
+                                <p class="text-danger">{{ error }}</p>
+                            {% endfor %}
+                        </div>
+                        <div class="form-group">
+                            {{ form.yam_tubers.label_tag }}
+                            {{ form.yam_tubers}}
+                            {% for error in form.yam_tubers.errors %}
+                                <p class="text-danger">{{ error }}</p>
+                            {% endfor %}
+                        </div>
+                        <div class="form-group">
+                            {{ form.red_oil.label_tag }}
+                            {{ form.red_oil}}
+                            {% for error in form.red_oil.errors %}
+                                <p class="text-danger">{{ error }}</p>
+                            {% endfor %}
+                        </div>
+                        <div class="form-group">
+                            {{ form.veg_oil.label_tag }}
+                            {{ form.veg_oil}}
+                            {% for error in form.veg_oil.errors %}
+                                <p class="text-danger">{{ error }}</p>
+                            {% endfor %}
+                        </div>
+                        <div class="form-group">
+                            {{ form.tomatoe.label_tag }}
+                            {{ form.tomatoe}}
+                            {% for error in form.tomatoe.errors %}
+                                <p class="text-danger">{{ error }}</p>
+                            {% endfor %}
+                        </div>
+                        <div class="form-group">
+                            {{ form.semo.label_tag }}
+                            {{ form.semo}}
+                            {% for error in form.semo.errors %}
                                 <p class="text-danger">{{ error }}</p>
                             {% endfor %}
                         </div>

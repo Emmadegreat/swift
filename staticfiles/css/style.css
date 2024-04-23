@@ -208,6 +208,10 @@ ol li{
     justify-content: space-between;
 }
 
+.table-head{
+    font-size: 0.7rem;
+}
+
 
 @media screen and (max-width:768px){
     .hero{
