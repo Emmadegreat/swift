@@ -75,6 +75,10 @@ class UserItemForm(forms.ModelForm):
     spaghetti_list = [('',''),('Half(0.5)','Half(0.5)'), ('1-Carton','1-Carton'), ('2-Cartons','2-Cartons'), ('3-Cartons','3-Cartons'),('No','No')]
     noodle_list = [('',''),('1-carton','1-Carton'), ('2-Carton','2-Carton'),('3-Cartons','3-Cartons'),('No','No')]
     yam_list = [('', ''), ('1', '1'), ('2', '2'), ('3', '3'), ('4','4'), ('5', '5'), ('6', '6'), ('7','7'), ('8', '8'),('9', '9'), ('10', '10'), ('11','11'), ('12','12'), ('13','13'), ('No','No')]
+    red_oil_list = [('',''),('Quarter(0.25)','Quarter(0.25)'), ('Half(0.5)','Half(0.5)'),('1','1'),('2','2'),('No','No')]
+    veg_oil_list = [('',''),('Quarter(0.25)','Quarter(0.25)'), ('Half(0.5)','Half(0.5)'),('1','1'),('2','2'),('No','No')]
+    tomatoe_list = [('',''),('Quarter(0.25)','Quarter(0.25)'),('Half(0.5)','Half(0.5)'),('1','1'),('2','2'),('No','No')]
+    semo_list = [('',''),('1-bag','1-bag'),('2-bag','2-bag'),('2-bag','2-bag'), ('No','No')]
     duration_list = [('',''),('1st Quarter','1st Quarter'), ('2nd Quarter','2nd Quarter'), ('3rd Quarter','3rd Quarter'), ('4th Quarter','4th Quarter')]
 
 
@@ -91,12 +95,16 @@ class UserItemForm(forms.ModelForm):
     oriental_noodles = forms.ChoiceField(label="Oriental-noodles", choices=noodle_list, widget=forms.Select(attrs={'class':'form-control'}))
     chikki_noodles = forms.ChoiceField(label="Chikki-noodles", choices=noodle_list, widget=forms.Select(attrs={'class':'form-control'}))
     yam_tubers = forms.ChoiceField(label="Yam-tubers", choices=yam_list, widget=forms.Select(attrs={'class': 'form-control'}))
+    red_oil = forms.ChoiceField(label="Red-oil", choices=red_oil_list, widget=forms.Select(attrs={'class': 'form-control'}))
+    veg_oil = forms.ChoiceField(label="Vegetable-oil", choices=veg_oil_list, widget=forms.Select(attrs={'class': 'form-control'}))
+    tomatoe = forms.ChoiceField(label="Tomatoe", choices=tomatoe_list, widget=forms.Select(attrs={'class': 'form-control'}))
+    semo = forms.ChoiceField(label="Semo", choices=semo_list, widget=forms.Select(attrs={'class': 'form-control'}))
     duration = forms.ChoiceField(label="Duration",choices=duration_list, widget=forms.Select(attrs={'class':'form-control'}))
 
     #user = forms.IntegerField(widget=forms.HiddenInput())
 
     class Meta:
         model = UserItems
-        fields = ('yam_tubers', 'white_garri', 'yellow_garri', 'nig_rice', 'foreign_rice', 'honey_beans', 'drum_beans', 'onions',
-                 'aunty_b_spag','g_penny_spag', 'oriental_noodles', 'chikki_noodles', 'duration'
+        fields = ('yam_tubers', 'white_garri', 'yellow_garri', 'nig_rice', 'foreign_rice', 'honey_beans', 'drum_beans', 'onions', 'red_oil',
+                 'aunty_b_spag','g_penny_spag', 'oriental_noodles', 'chikki_noodles', 'veg_oil', 'tomatoe', 'semo', 'duration'
                 )
