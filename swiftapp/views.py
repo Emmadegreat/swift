@@ -143,7 +143,8 @@ def export_excel(request):
     ws = wb.add_sheet('UserItems')
     row_num = 0
 
-    columns = ['name', 'garri', 'rice', 'honey-beans', 'oloyin-beans', 'onions', 'aunty_b_spag', 'g_penny_spag', 'Noodles(oriental)','Noodles(chikki)','yam']
+    columns = ['name', 'garri(white)', 'garri(yellow)', 'rice(Nig)', 'rice(foreign)', 'beans(honey)', 'beans(drum)', 'onions', 'spag(auntyB)',
+               'spag(Gpenny)', 'Noodles(oriental)','Noodles(chikki)','yam', 'red-oil', 'veg-oil', 'tomatoe', 'semo']
 
     font_style = xlwt.XFStyle()
     font_style.font.bold = True
@@ -152,13 +153,12 @@ def export_excel(request):
         ws.write(row_num, column, columns[column], font_style)
 
     font_style = xlwt.XFStyle()
-    #rows = UserItems.objects.filter(request.user).values_list('name', 'garri', 'rice', 'honey-beans', 'oloyin-beans', 'onions', 'aunty_b_spag', 'g_penny_spag', 'Noodles(oriental)','Noodles(chikki)','yam')
 
     useritems = UserItems.objects.all()
 
     for user in useritems:
         row_num += 1
-        ws.write(row_num, 0, user.user.last_name, font_style)
+        ws.write(row_num, 0, user.user.first_name, font_style)
         ws.write(row_num, 1, user.white_garri, font_style)
         ws.write(row_num, 2, user.yellow_garri, font_style)
         ws.write(row_num, 3, user.nig_rice, font_style)
