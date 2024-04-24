@@ -213,8 +213,8 @@ ol li{
     font-size: 0.7rem;
 }
 
-.items-form{
-    display: none;
+.wrapper{
+    display: flex;
     background-color: red;
 }
 
