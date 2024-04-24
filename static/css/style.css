@@ -201,6 +201,7 @@ ol li{
 
 .table{
     font-size: 0.9rem;
+    background-color: red;
 }
 
 .admin-table-header{
