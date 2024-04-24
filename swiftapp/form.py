@@ -84,12 +84,12 @@ class UserItemForm(forms.ModelForm):
 
 
 
-    white_garri_ijebu = forms.ChoiceField(label='White-garri-Ijebu)', choices=garri_list, widget=forms.Select(attrs={'class': 'form-control'}))
+    white_garri_ijebu = forms.ChoiceField(label='White-garri-Ijebu', choices=garri_list, widget=forms.Select(attrs={'class': 'form-control'}))
     white_garri_bendel = forms.ChoiceField(label='White-garri-Bendel', choices=garri_list, widget=forms.Select(attrs={'class': 'form-control'}))
     yellow_garri = forms.ChoiceField(label='Yellow-garri', choices=garri_list, widget=forms.Select(attrs={'class': 'form-control'}))
     nig_rice = forms.ChoiceField(label="Nig-rice", choices=rice_list, widget=forms.Select(attrs={'class':'form-control'}))
-    foreign_rice_small_grain = forms.ChoiceField(label="foreign-rice-small-grain", choices=rice_list, widget=forms.Select(attrs={'class':'form-control'}))
-    foreign_rice_big_grain = forms.ChoiceField(label="foreign-rice-big-grain", choices=rice_list, widget=forms.Select(attrs={'class':'form-control'}))
+    foreign_rice_small_grain = forms.ChoiceField(label="Foreign-rice-small-grain", choices=rice_list, widget=forms.Select(attrs={'class':'form-control'}))
+    foreign_rice_big_grain = forms.ChoiceField(label="Foreign-rice-big-grain", choices=rice_list, widget=forms.Select(attrs={'class':'form-control'}))
     honey_beans = forms.ChoiceField(label="Honey-beans", choices=beans_list, widget=forms.Select(attrs={'class':'form-control'}))
     drum_beans = forms.ChoiceField(label="Drum-beans", choices=beans_list, widget=forms.Select(attrs={'class':'form-control'}))
     pelebe_beans = forms.ChoiceField(label="Pelebe-beans", choices=beans_list, widget=forms.Select(attrs={'class':'form-control'}))
@@ -107,8 +107,8 @@ class UserItemForm(forms.ModelForm):
     red_oil = forms.ChoiceField(label="Red-oil", choices=red_oil_list, widget=forms.Select(attrs={'class': 'form-control'}))
     veg_oil = forms.ChoiceField(label="Vegetable-oil", choices=veg_oil_list, widget=forms.Select(attrs={'class': 'form-control'}))
     satchet_tomatoe = forms.ChoiceField(label="Satchet_tomatoe", choices=tomatoe_satchet_list, widget=forms.Select(attrs={'class': 'form-control'}))
-    tin_tomatoe_220g = forms.ChoiceField(label="tin_tomatoe_220g", choices=tomatoe_list, widget=forms.Select(attrs={'class': 'form-control'}))
-    tin_tomatoe_450g = forms.ChoiceField(label="tin_tomatoe_450g", choices=tomatoe_list, widget=forms.Select(attrs={'class': 'form-control'}))
+    tin_tomatoe_220g = forms.ChoiceField(label="Tin_tomatoe_220g", choices=tomatoe_list, widget=forms.Select(attrs={'class': 'form-control'}))
+    tin_tomatoe_450g = forms.ChoiceField(label="Tin_tomatoe_450g", choices=tomatoe_list, widget=forms.Select(attrs={'class': 'form-control'}))
     semo = forms.ChoiceField(label="Semo", choices=semo_list, widget=forms.Select(attrs={'class': 'form-control'}))
     duration = forms.ChoiceField(label="Duration",choices=duration_list, widget=forms.Select(attrs={'class':'form-control'}))
 

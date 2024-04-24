@@ -19,11 +19,11 @@
             {% endif %}
         </div>
 
-        <div class="col-sm-6 col-lg-5">
+        <div class="col-sm-6 col-lg-10">
             <div class="card bg-light mb-3 border-light">
-                <div class="card-header text-center mb-2  py-3"><h4 class='text-dark'>Make your choices here</h4></div>
+                <div class="card-header text-center mb-2  py-3"><h4 class='text-dark'>Pick your preferred items here</h4></div>
                 <div class="card-body">
-                    <form method="POST" novalidate class="px-4 pb-3">
+                    <form method="POST" novalidate class="px-4 pb-3" class="items-form">
                         {% if form.non_field_errors %}
                             {% for error in form.non_field_errors  %}
                                 <p class="text-danger" style="color:red;">{{error}}</p>
@@ -38,9 +38,16 @@
                             {% endfor %}-->
                         </div>
                         <div class="form-group">
-                            {{ form.white_garri.label_tag }}
-                            {{ form.white_garri}}
-                            {% for error in form.white_garri.errors %}
+                            {{ form.white_garri_ijebu.label_tag }}
+                            {{ form.white_garri_ijebu}}
+                            {% for error in form.white_garri_ijebu.errors %}
+                                <p class="text-danger">{{ error }}</p>
+                            {% endfor %}
+                        </div>
+                        <div class="form-group">
+                            {{ form.white_garri_bendel.label_tag }}
+                            {{ form.white_garri_bendel}}
+                            {% for error in form.white_garri_bendel.errors %}
                                 <p class="text-danger">{{ error }}</p>
                             {% endfor %}
                         </div>
@@ -60,9 +67,16 @@
                         </div>
 
                         <div class="form-group">
-                            {{ form.foreign_rice.label_tag }}
-                            {{ form.foreign_rice}}
-                            {% for error in form.foreign_rice.errors %}
+                            {{ form.foreign_rice_small_grain.label_tag }}
+                            {{ form.foreign_rice_small_grain}}
+                            {% for error in form.foreign_rice_small_grain.errors %}
+                                <p class="text-danger">{{ error }}</p>
+                            {% endfor %}
+                        </div>
+                        <div class="form-group">
+                            {{ form.foreign_rice_big_grain.label_tag }}
+                            {{ form.foreign_rice_big_grain}}
+                            {% for error in form.foreign_rice_big_grain.errors %}
                                 <p class="text-danger">{{ error }}</p>
                             {% endfor %}
                         </div>
@@ -84,9 +98,25 @@
                         </div>
 
                         <div class="form-group">
-                            {{ form.onions.label_tag }}
-                            {{ form.onions}}
-                            {% for error in form.onions.errors %}
+                            {{ form.pelebe_beans.label_tag }}
+                            {{ form.pelebe_beans}}
+                            {% for error in form.pelebe_beans.errors %}
+                                <p class="text-danger">{{ error }}</p>
+                            {% endfor %}
+                        </div>
+
+                        <div class="form-group">
+                            {{ form.onions_big_size.label_tag }}
+                            {{ form.onions_big_size}}
+                            {% for error in form.onions_big_size.errors %}
+                                <p class="text-danger">{{ error }}</p>
+                            {% endfor %}
+                        </div>
+
+                        <div class="form-group">
+                            {{ form.onions_gen_size.label_tag }}
+                            {{ form.onions_gen_size}}
+                            {% for error in form.onions_gen_size.errors %}
                                 <p class="text-danger">{{ error }}</p>
                             {% endfor %}
                         </div>
@@ -107,16 +137,49 @@
                         </div>
 
                         <div class="form-group">
-                            {{ form.oriental_noodles.label_tag }}
-                            {{ form.oriental_noodles}}
-                            {% for error in form.oriental_noodles.errors %}
+                            {{ form.crown_spag.label_tag }}
+                            {{ form.crown_spag}}
+                            {% for error in form.crown_spag.errors %}
                                 <p class="text-danger">{{ error }}</p>
                             {% endfor %}
                         </div>
+
+                        <div class="form-group">
+                            {{ form.dangote_spag.label_tag }}
+                            {{ form.dangote_spag}}
+                            {% for error in form.dangote_spag.errors %}
+                                <p class="text-danger">{{ error }}</p>
+                            {% endfor %}
+                        </div>
+
+                        <div class="form-group">
+                            {{ form.indomie_oriental.label_tag }}
+                            {{ form.indomie_oriental}}
+                            {% for error in form.indomie_oriental.errors %}
+                                <p class="text-danger">{{ error }}</p>
+                            {% endfor %}
+                        </div>
+
+                        <div class="form-group">
+                            {{ form.indomie_chicken.label_tag }}
+                            {{ form.indomie_chicken}}
+                            {% for error in form.indomie_chicken.errors %}
+                                <p class="text-danger">{{ error }}</p>
+                            {% endfor %}
+                        </div>
+
                         <div class="form-group">
                             {{ form.chikki_noodles.label_tag }}
                             {{ form.chikki_noodles}}
                             {% for error in form.chikki_noodles.errors %}
+                                <p class="text-danger">{{ error }}</p>
+                            {% endfor %}
+                        </div>
+
+                        <div class="form-group">
+                            {{ form.mimee_noodles.label_tag }}
+                            {{ form.mimee_noodles}}
+                            {% for error in form.mimee_noodles.errors %}
                                 <p class="text-danger">{{ error }}</p>
                             {% endfor %}
                         </div>
@@ -142,9 +205,23 @@
                             {% endfor %}
                         </div>
                         <div class="form-group">
-                            {{ form.tomatoe.label_tag }}
-                            {{ form.tomatoe}}
-                            {% for error in form.tomatoe.errors %}
+                            {{ form.satchet_tomatoe.label_tag }}
+                            {{ form.satchet_tomatoe}}
+                            {% for error in form.satchet_tomatoe.errors %}
+                                <p class="text-danger">{{ error }}</p>
+                            {% endfor %}
+                        </div>
+                        <div class="form-group">
+                            {{ form.tin_tomatoe_220g.label_tag }}
+                            {{ form.tin_tomatoe_220g}}
+                            {% for error in form.tin_tomatoe_220g.errors %}
+                                <p class="text-danger">{{ error }}</p>
+                            {% endfor %}
+                        </div>
+                        <div class="form-group">
+                            {{ form.tin_tomatoe_450g.label_tag }}
+                            {{ form.tin_tomatoe_450g}}
+                            {% for error in form.tin_tomatoe_450g.errors %}
                                 <p class="text-danger">{{ error }}</p>
                             {% endfor %}
                         </div>
@@ -156,13 +233,13 @@
                             {% endfor %}
                         </div>
 
-                        <div class="form-group">
+                        <!--<div class="form-group">
                             {{ form.duration.label_tag }}
                             {{ form.duration}}
                             {% for error in form.duration.errors %}
                                 <p class="text-danger">{{ error }}</p>
                             {% endfor %}
-                        </div>
+                        </div>-->
 
                         <p class="forgot_password"><a href="{% url 'password_reset' %}"></a></p><br>
                         <button type="submit" class="btn btn-success w-100 mb-3" width="100%">Submit</button>
