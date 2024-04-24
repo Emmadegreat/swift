@@ -214,7 +214,7 @@ ol li{
 }
 
 .items-form{
-    display: flex;
+    display: none;
     background-color: red;
 }
 
