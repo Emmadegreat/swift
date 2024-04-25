@@ -152,7 +152,7 @@ ol li{
 
 .whatsapp{
   position: fixed;
-  right: 5px;
+  right: 0px;
   left: 80%;
   bottom: 0;
   z-index: 1000;
