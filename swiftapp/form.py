@@ -80,7 +80,7 @@ class UserItemForm(forms.ModelForm):
     tomatoe_satchet_list = [('',''),('1-carton','1-carton'),('2-cartons','2-cartons'),('3-cartons','3-cartons'),('No','No')]
     tomatoe_list = [('',''),('Quarter(0.25)','Quarter(0.25)'),('Half(0.5)','Half(0.5)'),('1','1'),('2','2'),('No','No')]
     semo_list = [('',''),('1-bag','1-bag'),('2-bag','2-bag'),('2-bag','2-bag'), ('No','No')]
-    duration_list = [('',''),('1st Quarter','1st Quarter'), ('2nd Quarter','2nd Quarter'), ('3rd Quarter','3rd Quarter'), ('4th Quarter','4th Quarter')]
+    #duration_list = [('',''),('1st Quarter','1st Quarter'), ('2nd Quarter','2nd Quarter'), ('3rd Quarter','3rd Quarter'), ('4th Quarter','4th Quarter')]
 
 
 
@@ -110,7 +110,7 @@ class UserItemForm(forms.ModelForm):
     tin_tomatoe_220g = forms.ChoiceField(label="Tin-tomatoe_220g", choices=tomatoe_list, widget=forms.Select(attrs={'class': 'form-control'}))
     tin_tomatoe_450g = forms.ChoiceField(label="Tin-tomatoe_450g", choices=tomatoe_list, widget=forms.Select(attrs={'class': 'form-control'}))
     semo = forms.ChoiceField(label="Semo", choices=semo_list, widget=forms.Select(attrs={'class': 'form-control'}))
-    duration = forms.ChoiceField(label="Duration",choices=duration_list, widget=forms.Select(attrs={'class':'form-control'}))
+    #duration = forms.ChoiceField(label="Duration",choices=duration_list, widget=forms.Select(attrs={'class':'form-control'}))
 
     #user = forms.IntegerField(widget=forms.HiddenInput())
 
@@ -118,5 +118,5 @@ class UserItemForm(forms.ModelForm):
         model = UserItems
         fields = ('yam_tubers', 'white_garri_ijebu', 'white_garri_bendel', 'yellow_garri', 'nig_rice', 'foreign_rice_small_grain', 'foreign_rice_big_grain','honey_beans',
                 'drum_beans', 'pelebe_beans', 'onions_big_size', 'onions_gen_size', 'red_oil','aunty_b_spag','g_penny_spag', 'crown_spag', 'dangote_spag','indomie_oriental',
-                'indomie_chicken', 'chikki_noodles', 'mimee_noodles', 'veg_oil', 'satchet_tomatoe', 'tin_tomatoe_220g', 'tin_tomatoe_450g', 'semo', 'duration'
+                'indomie_chicken', 'chikki_noodles', 'mimee_noodles', 'veg_oil', 'satchet_tomatoe', 'tin_tomatoe_220g', 'tin_tomatoe_450g', 'semo'
                 )

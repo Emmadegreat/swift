@@ -75,7 +75,7 @@ class UserItems(models.Model):
     tomatoe_satchet_list = [('',''),('1-carton','1-carton'),('2-cartons','2-cartons'),('3-cartons','3-cartons'),('No','No')]
     tomatoe_list = [('',''),('Quarter(0.25)','Quarter(0.25)'),('Half(0.5)','Half(0.5)'),('1','1'),('2','2'),('No','No')]
     semo_list = [('',''),('1-bag','1-bag'),('2-bag','2-bag'),('2-bag','2-bag'), ('No','No')]
-    duration_list = [('',''),('1st Quarter','1st Quarter'), ('2nd Quarter','2nd Quarter'), ('3rd Quarter','3rd Quarter'), ('4th Quarter','4th Quarter')]
+    #duration_list = [('',''),('1st Quarter','1st Quarter'), ('2nd Quarter','2nd Quarter'), ('3rd Quarter','3rd Quarter'), ('4th Quarter','4th Quarter')]
 
     user = models.OneToOneField('SwiftUser', on_delete=models.CASCADE)
     white_garri_ijebu = models.CharField(choices=garri_list, null=True, blank=True, max_length=40)
@@ -104,7 +104,7 @@ class UserItems(models.Model):
     tin_tomatoe_220g = models.CharField(choices=tomatoe_list, null=True, blank=True, max_length=40)
     tin_tomatoe_450g = models.CharField(choices=tomatoe_list, null=True, blank=True, max_length=40)
     semo = models.CharField(choices=semo_list, null=True, blank=True, max_length=40)
-    duration = models.CharField(choices=duration_list, null=True, blank=True, max_length=40)
+    #duration = models.CharField(choices=duration_list, null=True, blank=True, max_length=40)
 
     def __str__(self):
         return (
@@ -114,5 +114,5 @@ class UserItems(models.Model):
             f"Onions_big_size: {self.onions_big_siz}, Onions_gen_size: {self.onions_gen_size}, Satchet_tomatoe: {self.satchet_tomatoe}, Tin_tomatoe_220g: {self.tin_tomatoe_220g},"
             f"Tin_tomatoe_450g: {self.tin_tomatoe_450g},Aunty_B_Spag: {self.aunty_b_spag}, G_penny_Spag: {self.g_penny_spag}, Crown_Spag: {self.crown_spag},"
             f"dangote_Spag: {self.dangote_spag}, Semo: {self.semo}, Indomie_oriental: {self.indomie_oriental}, Indomie_chicken: {self.indomie_chicken},"
-            f"Chikki_noodles: {self.chikki_noodles}, Mimee_noodles: {self.mimee_noodles}, Duration: {self.duration}"
+            f"Chikki_noodles: {self.chikki_noodles}, Mimee_noodles: {self.mimee_noodles}"
         )
