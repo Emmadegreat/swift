@@ -143,8 +143,12 @@ def export_excel(request):
     ws = wb.add_sheet('UserItems')
     row_num = 0
 
-    columns = ['name', 'garri(white)', 'garri(yellow)', 'rice(Nig)', 'rice(foreign)', 'beans(honey)', 'beans(drum)', 'onions', 'spag(auntyB)',
-               'spag(Gpenny)', 'Noodles(oriental)','Noodles(chikki)','yam', 'red-oil', 'veg-oil', 'tomatoe', 'semo']
+    columns = [
+        'Name', "Garri(white-Ijebu)", "Garri(white-Bendel)","Garri(yellow)","Rice(Nig)","Rice(foreign-small-grain)","Rice(foreign-big-grain)","Beans(honey)",
+        "Beans(drum)","Beans(pelebe)","Onions(big-size)","Onions(gen-size)","Spag(auntyB)","Spag(Gpenny)","Spag(crown)","Spag(dangote)",
+        "Noodles(indomie-oriental)","Noodles(indomie-chicken)","Noodles(chikki-chicken)","Noodles(mimee-chicken)","Yam","Red-oil",
+        "Veg-oil","Satchet-tomatoe","Tin-tomatoe(220g)","Tin-tomatoe(450g)","Semo"
+    ]
 
     font_style = xlwt.XFStyle()
     font_style.font.bold = True
@@ -159,23 +163,32 @@ def export_excel(request):
     for user in useritems:
         row_num += 1
         ws.write(row_num, 0, user.user.first_name, font_style)
-        ws.write(row_num, 1, user.white_garri, font_style)
-        ws.write(row_num, 2, user.yellow_garri, font_style)
-        ws.write(row_num, 3, user.nig_rice, font_style)
-        ws.write(row_num, 4, user.foreign_rice, font_style)
-        ws.write(row_num, 5, user.honey_beans, font_style)
-        ws.write(row_num, 6, user.drum_beans, font_style)
-        ws.write(row_num, 7, user.onions, font_style)
-        ws.write(row_num, 8, user.aunty_b_spag, font_style)
-        ws.write(row_num, 9, user.g_penny_spag, font_style)
-        ws.write(row_num, 10, user.oriental_noodles, font_style)
-        ws.write(row_num, 11, user.chikki_noodles, font_style)
-        ws.write(row_num, 12, user.yam_tubers, font_style)
-        ws.write(row_num, 13, user.red_oil, font_style)
-        ws.write(row_num, 14, user.veg_oil,font_style)
-        ws.write(row_num, 15, user.tomatoe, font_style)
-        ws.write(row_num, 16, user.semo, font_style)
-        ws.write(row_num, 17, user.duration, font_style)
+        ws.write(row_num, 1, user.white_garri_ijebu, font_style)
+        ws.write(row_num, 2, user.white_garri_bendel, font_style)
+        ws.write(row_num, 3, user.yellow_garri, font_style)
+        ws.write(row_num, 4, user.nig_rice, font_style)
+        ws.write(row_num, 5, user.foreign_rice_small_grain, font_style)
+        ws.write(row_num, 6, user.foreign_rice_big_grain, font_style)
+        ws.write(row_num, 7, user.honey_beans, font_style)
+        ws.write(row_num, 8, user.drum_beans, font_style)
+        ws.write(row_num, 9, user.pelebe_beans, font_style)
+        ws.write(row_num, 10, user.onions_big_size, font_style)
+        ws.write(row_num, 11, user.onions_gen_size, font_style)
+        ws.write(row_num, 12, user.aunty_b_spag, font_style)
+        ws.write(row_num, 13, user.g_penny_spag, font_style)
+        ws.write(row_num, 14, user.crown_spag, font_style)
+        ws.write(row_num, 15, user.dangote_spag, font_style)
+        ws.write(row_num, 16, user.noodles_indomie_oriental, font_style)
+        ws.write(row_num, 17, user.noodles_indomie_chicken, font_style)
+        ws.write(row_num, 18, user.noodles_chikki_chicken, font_style)
+        ws.write(row_num, 19, user.noodles_mimee_chicken, font_style)
+        ws.write(row_num, 20, user.yam_tubers, font_style)
+        ws.write(row_num, 21, user.red_oil, font_style)
+        ws.write(row_num, 22, user.veg_oil,font_style)
+        ws.write(row_num, 23, user.satchet_tomatoe, font_style)
+        ws.write(row_num, 24, user.tin_tomatoe_220g, font_style)
+        ws.write(row_num, 25, user.tin_tomatoe_450g, font_style)
+        ws.write(row_num, 26, user.semo, font_style)
 
     wb.save(response)
     return response

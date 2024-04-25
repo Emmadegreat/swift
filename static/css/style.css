@@ -152,8 +152,8 @@ ol li{
 
 .whatsapp{
   position: fixed;
-  right: 0px;
-  left: 90%;
+  right: 5px;
+  left: 80%;
   bottom: 0;
   z-index: 1000;
 }
@@ -214,8 +214,16 @@ ol li{
 }
 
 .wrapper{
-    display: flex;
-    background-color: red;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+@media screen and (max-width:1024px) {
+    .wrapper{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 
@@ -243,7 +251,14 @@ ol li{
     }
 
     .whatsapp{
-        left: 83%;
+        left: 80%;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .wrapper{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 

@@ -106,9 +106,9 @@ class UserItemForm(forms.ModelForm):
     yam_tubers = forms.ChoiceField(label="Yam-tubers", choices=yam_list, widget=forms.Select(attrs={'class': 'form-control'}))
     red_oil = forms.ChoiceField(label="Red-oil", choices=red_oil_list, widget=forms.Select(attrs={'class': 'form-control'}))
     veg_oil = forms.ChoiceField(label="Vegetable-oil", choices=veg_oil_list, widget=forms.Select(attrs={'class': 'form-control'}))
-    satchet_tomatoe = forms.ChoiceField(label="Satchet_tomatoe", choices=tomatoe_satchet_list, widget=forms.Select(attrs={'class': 'form-control'}))
-    tin_tomatoe_220g = forms.ChoiceField(label="Tin_tomatoe_220g", choices=tomatoe_list, widget=forms.Select(attrs={'class': 'form-control'}))
-    tin_tomatoe_450g = forms.ChoiceField(label="Tin_tomatoe_450g", choices=tomatoe_list, widget=forms.Select(attrs={'class': 'form-control'}))
+    satchet_tomatoe = forms.ChoiceField(label="Satchet-tomatoe", choices=tomatoe_satchet_list, widget=forms.Select(attrs={'class': 'form-control'}))
+    tin_tomatoe_220g = forms.ChoiceField(label="Tin-tomatoe_220g", choices=tomatoe_list, widget=forms.Select(attrs={'class': 'form-control'}))
+    tin_tomatoe_450g = forms.ChoiceField(label="Tin-tomatoe_450g", choices=tomatoe_list, widget=forms.Select(attrs={'class': 'form-control'}))
     semo = forms.ChoiceField(label="Semo", choices=semo_list, widget=forms.Select(attrs={'class': 'form-control'}))
     duration = forms.ChoiceField(label="Duration",choices=duration_list, widget=forms.Select(attrs={'class':'form-control'}))
 
