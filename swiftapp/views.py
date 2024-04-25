@@ -144,7 +144,7 @@ def export_excel(request):
     row_num = 0
 
     columns = [
-        'Name', "Garri(white-Ijebu)", "Garri(white-Bendel)","Garri(yellow)","Rice(Nig)","Rice(foreign-small-grain)","Rice(foreign-big-grain)","Beans(honey)",
+        "Name", "Garri(white-Ijebu)", "Garri(white-Bendel)","Garri(yellow)","Rice(Nig)","Rice(foreign-small-grain)","Rice(foreign-big-grain)","Beans(honey)",
         "Beans(drum)","Beans(pelebe)","Onions(big-size)","Onions(gen-size)","Spag(auntyB)","Spag(Gpenny)","Spag(crown)","Spag(dangote)",
         "Noodles(indomie-oriental)","Noodles(indomie-chicken)","Noodles(chikki-chicken)","Noodles(mimee-chicken)","Yam","Red-oil",
         "Veg-oil","Satchet-tomatoe","Tin-tomatoe(220g)","Tin-tomatoe(450g)","Semo"
@@ -178,10 +178,10 @@ def export_excel(request):
         ws.write(row_num, 13, user.g_penny_spag, font_style)
         ws.write(row_num, 14, user.crown_spag, font_style)
         ws.write(row_num, 15, user.dangote_spag, font_style)
-        ws.write(row_num, 16, user.noodles_indomie_oriental, font_style)
-        ws.write(row_num, 17, user.noodles_indomie_chicken, font_style)
-        ws.write(row_num, 18, user.noodles_chikki_chicken, font_style)
-        ws.write(row_num, 19, user.noodles_mimee_chicken, font_style)
+        ws.write(row_num, 16, user.indomie_oriental, font_style)
+        ws.write(row_num, 17, user.indomie_chicken, font_style)
+        ws.write(row_num, 18, user.chikki_noodles, font_style)
+        ws.write(row_num, 19, user.mimee_noodles, font_style)
         ws.write(row_num, 20, user.yam_tubers, font_style)
         ws.write(row_num, 21, user.red_oil, font_style)
         ws.write(row_num, 22, user.veg_oil,font_style)
