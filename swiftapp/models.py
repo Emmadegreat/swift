@@ -111,7 +111,7 @@ class UserItems(models.Model):
             f"{self.user.email}- Yam: {self.yam_tubers}, White_garri_ijebu: {self.white_garri_ijebu}, White_garri_bendel: {self.white_garri_bendel},"
             f"Yellow_garri: {self.yellow_garri}, Nig_rice: {self.nig_rice},Red_oil: {self.red_oil}, Foreign_rice_small_grain: {self.foreign_rice_small_grain},"
             f"Foreign_rice_big_grain: {self.foreign_rice_big_grain},Honey_beans: {self.honey_beans}, Drum_beans: {self.drum_beans},""Pelebe_beans:{self.pelebe_beans},"
-            f"Onions_big_size: {self.onions_big_siz}, Onions_gen_size: {self.onions_gen_size},Tomatoe_satchet: {self.satchet_tomatoe}, Tin_tomatoe_220g: {self.tin_tomatoe_220g},"
+            f"Onions_big_size: {self.onions_big_siz}, Onions_gen_size: {self.onions_gen_size}, Satchet_tomatoe: {self.satchet_tomatoe}, Tin_tomatoe_220g: {self.tin_tomatoe_220g},"
             f"Tin_tomatoe_450g: {self.tin_tomatoe_450g},Aunty_B_Spag: {self.aunty_b_spag}, G_penny_Spag: {self.g_penny_spag}, Crown_Spag: {self.crown_spag},"
             f"dangote_Spag: {self.dangote_spag}, Semo: {self.semo}, Indomie_oriental: {self.indomie_oriental}, Indomie_chicken: {self.indomie_chicken},"
             f"Chikki_noodles: {self.chikki_noodles}, Mimee_noodles: {self.mimee_noodles}, Duration: {self.duration}"
