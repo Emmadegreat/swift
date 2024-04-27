@@ -80,7 +80,7 @@ def items(request):
             user_items.save()
 
             messages.success(request, f'Successfully submitted')
-            return redirect('dashboard')
+            #return redirect('dashboard')
     else:
         form = UserItemForm()
 
