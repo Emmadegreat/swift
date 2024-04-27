@@ -8,21 +8,22 @@
 let btn = document.getElementById('btn');
 let Notavailable = document.querySelectorAll('.not-available');
 
-Notavailable.forEach(element => {
-    element.style.display = 'none';
-    element.style.color='red';
-});
+//Notavailable.forEach(element => {
+    //element.style.display = 'none';
+    //element.style.color='red';
+//});
 
 
 btn.addEventListener("click", (e) => {
     e.preventDefault();
 
     Notavailable.forEach(element => {
-        if (element.style.display === "none") {
-            element.style.display = "block";
-        } else {
-            element.style.display = "none";
-        }
+        element.classList.toggle('d-none');
+        //if (element.style.display === "none") {
+            //element.style.display = "block";
+        //} else {
+            //element.style.display = "none";
+        //}
     });
 
 })
