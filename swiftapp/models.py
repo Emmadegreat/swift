@@ -66,7 +66,7 @@ class SwiftUser(AbstractUser):
 
 
 class ShowElement(models.Model):
-    are_visible = models.BooleanField(default=False)
+    are_visible = models.BooleanField(default=True)
 
 class UserItems(models.Model):
 
