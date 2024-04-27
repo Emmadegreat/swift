@@ -67,24 +67,33 @@ def Login(request):
 def items(request):
     form = UserItemForm()
 
-    #if UserItems.objects.filter(user=request.user).exists():
-        #messages.success(request, f'You have already added items')
-        #return redirect('dashboard')
-
-    if request.method == 'POST':
-        form = UserItemForm(request.POST)
-
-        if form.is_valid():
-            user_items = form.save(commit = False)
-            user_items.user = request.user
-            user_items.save()
-
-            messages.success(request, f'Successfully submitted')
-            #return redirect('dashboard')
+    toggle_state = toggleState.objects.first()
+    if toggl_eState and toggl_eState.show_elements():
+        show_elements = True
     else:
-        form = UserItemForm()
+        show_elements = False
 
-    return render(request, 'items.html', {'form': form})
+        context= {'show_elements': show_elements}
+
+        if UserItems.objects.filter(user=request.user).exists():
+            messages.success(request, f'You have already added items')
+            return redirect('dashboard')
+
+
+        if request.method == 'POST':
+            form = UserItemForm(request.POST)
+
+            if form.is_valid():
+                user_items = form.save(commit = False)
+                user_items.user = request.user
+                user_items.save()
+
+                messages.success(request, f'Successfully submitted')
+                return redirect('dashboard')
+        else:
+            form = UserItemForm()
+
+    return render(request, 'items.html', {'form': form}, context)
 
 
 @login_required(login_url='/login')
