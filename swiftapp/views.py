@@ -90,14 +90,6 @@ def items(request):
 
 
 
-def toggle_display(request):
-    show_element = ShowElement.objects.first()
-    show_element.are_visible = not show_element.are_visible
-    show_element.save()
-    return redirect('dashboard')
-
-
-
 @login_required(login_url='/login')
 def edit(request, id):
     if request.method == 'POST':

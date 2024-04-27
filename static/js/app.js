@@ -27,14 +27,6 @@ btn.addEventListener("click", (e) => {
 
 })
 
-fetch("{% url 'toggle_display' %")
-    .then(response => {
-        if (response.redirect) {
-            window.location.href = response.url
-        }
-    })
-    .catch(error => { console.log('error', error)})
-
 //btn.addEventListener('click', (e) => {
     //e.preventDefault();
     //am.style.backgroundColor = 'red';
