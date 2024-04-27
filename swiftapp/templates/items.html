@@ -228,6 +228,7 @@
                                     <p class="text-danger">{{ error }}</p>
                                 {% endfor %}
                             </div>
+                        {% else %}
                             <div class="form-group not-available">
                                 {{ form.tin_tomatoe_450g.label_tag }}
                                 {{ form.tin_tomatoe_450g}}
@@ -243,10 +244,9 @@
                                     <p class="text-danger">{{ error }}</p>
                                 {% endfor %}
                             </div>
-
-
-                        </div>
                         {% endif %}
+                        </div>
+
 
                         <button type="submit" class="btn btn-success w-100 mb-3 mt-4" width="100%">Submit</button>
                     </form>
