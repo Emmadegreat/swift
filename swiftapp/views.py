@@ -10,6 +10,7 @@ from django.contrib.messages.views import SuccessMessageMixin
 from django.urls import reverse_lazy
 import datetime
 import xlwt
+from .models import ShowElement
 
 
 # Create your views here.
@@ -65,35 +66,27 @@ def Login(request):
 
 @login_required(login_url='/login')
 def items(request):
+    show_hidden_items = ShowElement.objects.first().are_visible
     form = UserItemForm()
 
-    toggle_state = toggleState.objects.first()
-    if toggl_eState and toggl_eState.show_elements():
-        show_elements = True
-    else:
-        show_elements = False
+    if UserItems.objects.filter(user=request.user).exists():
+        messages.success(request, f'You have already added items')
+        return redirect('dashboard')
 
-        context= {'show_elements': show_elements}
+    if request.method == 'POST':
+        form = UserItemForm(request.POST)
 
-        if UserItems.objects.filter(user=request.user).exists():
-            messages.success(request, f'You have already added items')
+        if form.is_valid():
+            user_items = form.save(commit = False)
+            user_items.user = request.user
+            user_items.save()
+
+            messages.success(request, f'Successfully submitted')
             return redirect('dashboard')
+    else:
+        form = UserItemForm()
 
-
-        if request.method == 'POST':
-            form = UserItemForm(request.POST)
-
-            if form.is_valid():
-                user_items = form.save(commit = False)
-                user_items.user = request.user
-                user_items.save()
-
-                messages.success(request, f'Successfully submitted')
-                return redirect('dashboard')
-        else:
-            form = UserItemForm()
-
-    return render(request, 'items.html', {'form': form}, context)
+    return render(request, 'items.html', {'form': form, 'toggle_status': show_hidden_items})
 
 
 @login_required(login_url='/login')
