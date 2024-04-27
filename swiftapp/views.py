@@ -66,7 +66,6 @@ def Login(request):
 
 @login_required(login_url='/login')
 def items(request):
-    #show_hidden_items = ShowElement.objects.first().are_visible
     form = UserItemForm()
 
     #if UserItems.objects.filter(user=request.user).exists():
