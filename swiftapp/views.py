@@ -10,7 +10,7 @@ from django.contrib.messages.views import SuccessMessageMixin
 from django.urls import reverse_lazy
 import datetime
 import xlwt
-from .models import ShowElement
+#from .models import ShowElement
 
 
 # Create your views here.
@@ -66,7 +66,7 @@ def Login(request):
 
 @login_required(login_url='/login')
 def items(request):
-    show_hidden_items = ShowElement.objects.first().are_visible
+    #show_hidden_items = ShowElement.objects.first().are_visible
     form = UserItemForm()
 
     #if UserItems.objects.filter(user=request.user).exists():

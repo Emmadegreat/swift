@@ -23,10 +23,10 @@
             <div class="card bg-light mb-3 border-light">
                 <div class="card-header text-center mb-2  py-3">
 
-                    {% if user.is_superuser %}
+
                         <button type="button" class="btn btn-success" id="btn">show/hide</button>
 
-                    {% endif %}
+
 
 
                     <h4 class='text-dark'>Pick your preferred items here</h4>
@@ -246,7 +246,7 @@
                                     <p class="text-danger">{{ error }}</p>
                                 {% endfor %}
                             </div>
-                         {% if toggle_status %}
+
                             <div class="form-group not-available">
                                 {{ form.tin_tomatoe_450g.label_tag }}
                                 {{ form.tin_tomatoe_450g}}
@@ -263,14 +263,14 @@
                                 {% endfor %}
                             </div>
 
-                        {% else %}
+
 
                         <div class="form-group not-available">
                                 {{ form.tin_tomatoe_450g.label_tag }}
                                 {{ form.tin_tomatoe_450g}}
                                 {% for error in form.tin_tomatoe_450g.errors %}
                                     <p class="text-danger">{{ error }}</p>
-                                {% endfor %}
+
                             </div>
 
                             <div class="form-group not-available">
@@ -279,7 +279,7 @@
                                 {% for error in form.semo.errors %}
                                     <p class="text-danger">{{ error }}</p>
                                 {% endfor %}
-                        {% endif %}
+
                         </div>
 
 

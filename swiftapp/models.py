@@ -42,12 +42,12 @@ class SwiftUser(AbstractUser):
     is_active = models.BooleanField(default=True)
     is_superuser = models.BooleanField(default=False)
     is_admin = models.BooleanField(default=False)
-    toggle_status = models.BooleanField(default=False)
 
-    def save(self, *args, **kwargs):
-        super().save(*args, **kwargs)
-        if self.is_superuser:
-            ShowElement.objects.update_or_create(defaults={'are_visible': self.toggle_status})
+
+    #def save(self, *args, **kwargs):
+        #super().save(*args, **kwargs)
+        #if self.is_superuser:
+            #ShowElement.objects.update_or_create(defaults={'are_visible': self.toggle_status})
 
 
     USERNAME_FIELD = 'email'
