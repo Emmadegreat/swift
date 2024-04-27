@@ -5,19 +5,29 @@
 
 //let yam = document.getElementById('yam')
 
-document.addEventListener('DOMContentLoaded', function () {
-            // Get the button and elements to toggle
-            var btn = document.getElementById('btn');
-            var elements = document.querySelectorAll('.not-available');
+let btn = document.getElementById('btn');
+let Notavailable = document.querySelectorAll('.not-available');
 
-            // Add click event listener to the button
-            btn.addEventListener('click', function () {
-                // Toggle visibility of elements
-                elements.forEach(function (element) {
-                    element.classList.toggle('d-none');
-                });
-            });
-        });
+//Notavailable.forEach(element => {
+    //element.style.display = 'none';
+    //element.style.color='red';
+//});
+
+
+btn.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    Notavailable.forEach(element => {
+        element.classList.toggle('d-none');
+        //if (element.style.display === "none") {
+            //element.style.display = "block";
+        //} else {
+            //element.style.display = "none";
+        //}
+    });
+
+})
+
 //btn.addEventListener('click', (e) => {
     //e.preventDefault();
     //am.style.backgroundColor = 'red';
