@@ -22,7 +22,12 @@
         <div class="">
             <div class="card bg-light mb-3 border-light">
                 <div class="card-header text-center mb-2  py-3">
-                    <button type="button" class="btn btn-success" id="btn">show/hide</button>
+
+                    {% if user.is_superuser %}
+                        <button type="button" class="btn btn-success" id="btn">show/hide</button>
+
+                    {% endif %}
+
 
                     <h4 class='text-dark'>Pick your preferred items here</h4>
                 </div>
