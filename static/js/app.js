@@ -29,7 +29,7 @@ btn.addEventListener("click", (e) => {
 })
 
 addFieldBtn.addEventListener("click", (e) => {
-    ee.preventDefault(e);
+    e.preventDefault();
 
     let newField = document.createElement('div');
     newField.classList.add('form-group');
