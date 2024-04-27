@@ -21,7 +21,14 @@
 
         <div class="">
             <div class="card bg-light mb-3 border-light">
-                <div class="card-header text-center mb-2  py-3"><h4 class='text-dark'>Pick your preferred items here</h4></div>
+                <div class="card-header text-center mb-2  py-3">
+
+                    {% if user.is_superuser %}
+                        <button type="button" class="btn btn-success" id="btn">show/hide</button>
+                    {% endif %}
+
+                    <h4 class='text-dark'>Pick your preferred items here</h4>
+                </div>
                 <div class="card-body">
                     <form method="POST" novalidate class="px-2 pb-3">
                         {% if form.non_field_errors %}
@@ -185,14 +192,14 @@
                                     <p class="text-danger">{{ error }}</p>
                                 {% endfor %}
                             </div>
-                            <div class="form-group">
+                            <div class="form-group not-available" id="yam">
                                 {{ form.yam_tubers.label_tag }}
                                 {{ form.yam_tubers}}
                                 {% for error in form.yam_tubers.errors %}
                                     <p class="text-danger">{{ error }}</p>
                                 {% endfor %}
                             </div>
-                            <div class="form-group">
+                            <div class="form-group not-available">
                                 {{ form.red_oil.label_tag }}
                                 {{ form.red_oil}}
                                 {% for error in form.red_oil.errors %}

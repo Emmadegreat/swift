@@ -1,7 +1,54 @@
 //TweenLite.defaultEase = Expo.easeOut;
-//alert('huuuuuuuuuuuu');
+
 //let pp = document.querySelector(".test").innerHTML = "Hello";
 //console.log(pp);
+
+//let yam = document.getElementById('yam')
+
+let btn = document.getElementById('btn');
+let Notavailable = document.querySelectorAll('.not-available');
+
+Notavailable.forEach(element => {
+    element.style.display = 'none';
+    element.style.color='red';
+});
+
+
+btn.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    Notavailable.forEach(element => {
+        if (element.style.display === "none") {
+            element.style.display = "block";
+        } else {
+            element.style.display = "none";
+        }
+    });
+
+})
+
+//btn.addEventListener('click', (e) => {
+    //e.preventDefault();
+    //am.style.backgroundColor = 'red';
+    //if (yam.style.display = 'none') {
+        //yam.style.display = 'block';
+    //}
+//});
+
+//lert('huuuuuuuuuuuu');
+/*let yam = document.getElementById('yam')
+yam.style.display = "none";
+function Show() {
+
+    //yam.style.backgroundColor = 'red';
+    if (yam.style.display = 'none') {
+        yam.style.display = 'block';
+    }
+    //if (yam.style.display = 'block') {
+       // yam.style.display = 'none';
+    //
+}*/
+
 const contactCard = document.querySelectorAll(".contact-col");
 
 contactCard.forEach(card => {

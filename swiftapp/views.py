@@ -67,9 +67,9 @@ def Login(request):
 def items(request):
     form = UserItemForm()
 
-    if UserItems.objects.filter(user=request.user).exists():
-        messages.success(request, f'You have already added items')
-        return redirect('dashboard')
+    #if UserItems.objects.filter(user=request.user).exists():
+        #messages.success(request, f'You have already added items')
+        #return redirect('dashboard')
 
     if request.method == 'POST':
         form = UserItemForm(request.POST)
