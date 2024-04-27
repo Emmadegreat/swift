@@ -86,7 +86,7 @@ def items(request):
     else:
         form = UserItemForm()
 
-    return render(request, 'items.html', {'form': form, 'toggle_status': show_hidden_items})
+    return render(request, 'items.html', {'form': form})
 
 
 
