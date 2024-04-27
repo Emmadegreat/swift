@@ -77,6 +77,11 @@ def items(request):
 
         if form.is_valid():
             user_items = form.save(commit = False)
+
+            for key, value in request.POST.user_items():
+                if key not in form.fields:
+                    setattr(form, key, value)
+
             user_items.user = request.user
             user_items.save()
 

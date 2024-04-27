@@ -23,6 +23,7 @@
             <div class="card bg-light mb-3 border-light">
                 <div class="card-header text-center mb-2  py-3">
                     <button type="button" class="btn btn-success" id="btn">show/hide</button>
+                    <button type="button" class="btn btn-success" id="add-field">Add items</button>
                     <h4 class='text-dark'>Pick your preferred items here</h4>
                 </div>
                 <div class="card-body">
@@ -41,7 +42,7 @@
                                 {% endfor %}
                             </div>-->
 
-                        <div class="wrapper">
+                        <div class="wrapper" id="form-fields">
 
                             <div class="form-group">
                                 {{ form.white_garri_ijebu.label_tag }}

@@ -3,10 +3,11 @@
 //let pp = document.querySelector(".test").innerHTML = "Hello";
 //console.log(pp);
 
-//let yam = document.getElementById('yam')
 
 let btn = document.getElementById('btn');
 let Notavailable = document.querySelectorAll('.not-available');
+let addFieldBtn = document.getElementById('add-field');
+let formFields = document.getElementById('form-fields');
 
 Notavailable.forEach(element => {
     element.style.display = 'none';
@@ -25,6 +26,18 @@ btn.addEventListener("click", (e) => {
         }
     });
 
+})
+
+addFieldBtn.addEventListener("click", (e) => {
+    ee.preventDefault(e);
+
+    let newField = document.createElement('div');
+    newField.classList.add('form-group');
+    newField.innerHTML = `
+        <label for="new-field">New Field: </label>
+        <input type="text" name="new_field" id="new_field" class="form-control">
+    `
+    formFields.appendChild(newField);
 })
 
 //btn.addEventListener('click', (e) => {

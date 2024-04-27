@@ -120,3 +120,6 @@ class UserItemForm(forms.ModelForm):
                 'drum_beans', 'pelebe_beans', 'onions_big_size', 'onions_gen_size', 'red_oil','aunty_b_spag','g_penny_spag', 'crown_spag', 'dangote_spag','indomie_oriental',
                 'indomie_chicken', 'chikki_noodles', 'mimee_noodles', 'veg_oil', 'satchet_tomatoe', 'tin_tomatoe_220g', 'tin_tomatoe_450g', 'semo'
                 )
+
+    def add_dynamic_fields(self, field_name,field_value):
+        self.fields[field_name] = forms.CharField(label=field_name,initial=field_value,widget=forms.TextInput(attrs={'class':'form-control'}))
