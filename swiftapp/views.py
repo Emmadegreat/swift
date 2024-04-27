@@ -89,6 +89,15 @@ def items(request):
     return render(request, 'items.html', {'form': form, 'toggle_status': show_hidden_items})
 
 
+
+def toggle_display(request):
+    show_element = ShowElement.objects.first()
+    show_element.are_visible = not show_element.are_visible
+    show_element.save()
+    return redirect('dashboard')
+
+
+
 @login_required(login_url='/login')
 def edit(request, id):
     if request.method == 'POST':
