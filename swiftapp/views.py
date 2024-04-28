@@ -82,7 +82,7 @@ def items(request):
                 if field_name not in form.fields:
                     form.set_dynamic_choices(field_name, choices)
                     setattr(user_items, field_name, request.POST[field_name])
-            #user_items.user = request.user
+            user_items.user = request.user
             user_items.save()
 
             messages.success(request, f'Successfully submitted')
