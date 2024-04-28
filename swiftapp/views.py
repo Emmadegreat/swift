@@ -78,10 +78,10 @@ def items(request):
         if form.is_valid():
             user_items = form.save(commit = False)
 
-            for field_name, choices in request.POST.user_items():
-                if field_name not in form.fields:
-                    form.set_dynamic_choices(field_name, choices)
-                    setattr(user_items, field_name, request.POST[field_name])
+            #for key, value in request.POST.user_items():
+                #if key not in form.fields:
+                    #setattr(form, key, value)
+
             user_items.user = request.user
             user_items.save()
 
