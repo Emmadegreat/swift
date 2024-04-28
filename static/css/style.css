@@ -203,7 +203,7 @@ ol li{
     font-size: 0.9rem;
 }
 
-.admin-table-header{
+.admin-table-header, .items-table-header{
     display: flex;
     justify-content: space-between;
 }
@@ -251,6 +251,10 @@ ol li{
 
     .whatsapp{
         left: 80%;
+    }
+    .items-table-header{
+        flex-direction: column;
+        font-size: 0.8rem;
     }
 }
 
