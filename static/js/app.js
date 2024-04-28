@@ -54,18 +54,6 @@ addFieldBtn.addEventListener("click", (e) => {
 //});
 
 //lert('huuuuuuuuuuuu');
-/*let yam = document.getElementById('yam')
-yam.style.display = "none";
-function Show() {
-
-    //yam.style.backgroundColor = 'red';
-    if (yam.style.display = 'none') {
-        yam.style.display = 'block';
-    }
-    //if (yam.style.display = 'block') {
-       // yam.style.display = 'none';
-    //
-}*/
 
 const contactCard = document.querySelectorAll(".contact-col");
 

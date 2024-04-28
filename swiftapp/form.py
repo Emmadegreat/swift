@@ -114,8 +114,8 @@ class UserItemForm(forms.ModelForm):
 
     #user = forms.IntegerField(widget=forms.HiddenInput())
 
-    def set_dynamic_choices(self, field_name, choices):
-        self.fields[field_name] = forms.ChoiceField(label=field_name,choices=choices,widget=forms.Select(attrs={'class':'form-control'}))
+    #def set_dynamic_choices(self, field_name, choices):
+        #self.fields[field_name] = forms.ChoiceField(label=field_name,choices=choices,widget=forms.Select(attrs={'class':'form-control'}))
     class Meta:
         model = UserItems
         fields = ('yam_tubers', 'white_garri_ijebu', 'white_garri_bendel', 'yellow_garri', 'nig_rice', 'foreign_rice_small_grain', 'foreign_rice_big_grain','honey_beans',

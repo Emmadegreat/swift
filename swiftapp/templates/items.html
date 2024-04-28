@@ -22,8 +22,8 @@
         <div class="">
             <div class="card bg-light mb-3 border-light">
                 <div class="card-header text-center mb-2  py-3">
-                    <button type="button" class="btn btn-success" id="btn">show/hide</button>
-                    <button type="button" class="btn btn-success" id="add-field">Add items</button>
+                    <!--<button type="button" class="btn btn-success" id="btn">show/hide</button>
+                    <button type="button" class="btn btn-success" id="add-field">Add items</button>-->
                     <h4 class='text-dark'>Pick your preferred items here</h4>
                 </div>
                 <div class="card-body">
@@ -244,41 +244,7 @@
                                 {% endfor %}
                             </div>
 
-                            <div class="form-group not-available">
-                                {{ form.tin_tomatoe_450g.label_tag }}
-                                {{ form.tin_tomatoe_450g}}
-                                {% for error in form.tin_tomatoe_450g.errors %}
-                                    <p class="text-danger">{{ error }}</p>
-                                {% endfor %}
-                            </div>
-
-                            <div class="form-group not-available">
-                                {{ form.semo.label_tag }}
-                                {{ form.semo}}
-                                {% for error in form.semo.errors %}
-                                    <p class="text-danger">{{ error }}</p>
-                                {% endfor %}
-                            </div>
-
-
-
-                            <div class="form-group not-available">
-                                {{ form.tin_tomatoe_450g.label_tag }}
-                                {{ form.tin_tomatoe_450g}}
-                                {% for error in form.tin_tomatoe_450g.errors %}
-                                    <p class="text-danger">{{ error }}</p>
-                                {% endfor %}
-                                </div>
-
-                                <div class="form-group not-available">
-                                    {{ form.semo.label_tag }}
-                                    {{ form.semo}}
-                                    {% for error in form.semo.errors %}
-                                        <p class="text-danger">{{ error }}</p>
-                                    {% endfor %}
-
-                                </div>
-                            </div>
+                        </div>
 
                         <button type="submit" class="btn btn-success w-100 mb-3 mt-4" width="100%">Submit</button>
                     </form>
