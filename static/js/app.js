@@ -34,9 +34,14 @@ addFieldBtn.addEventListener("click", (e) => {
     let newField = document.createElement('div');
     newField.classList.add('form-group');
     newField.innerHTML = `
-        <label for="new-field">New Field: </label>
-        <input type="text" name="new_field" id="new_field" class="form-control">
-    `
+        <label for="new-field">New Field:</label>
+        <select name="new_field" id="new-field" class="form-control">
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+            <!-- Add more options as needed -->
+        </select>
+    `;
     formFields.appendChild(newField);
 })
 

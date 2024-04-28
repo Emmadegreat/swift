@@ -104,7 +104,7 @@ class UserItems(models.Model):
     indomie_chicken = models.CharField(choices=noodle_list, null=True, blank=True, max_length=40)
     chikki_noodles = models.CharField(choices=noodle_list, null=True, blank=True, max_length=40)
     mimee_noodles = models.CharField(choices=noodle_list, null=True, blank=True, max_length=40)
-    yam_tubers = models.CharField(choices=yam_list, null=True, blank=True, max_length=40)
+    yam_tubers = models.CharField(choices=yam_list, null=True, blank=True, default='', max_length=40)
     red_oil = models.CharField(choices=red_oil_list, null=True, blank=True, max_length=40)
     veg_oil = models.CharField(choices=veg_oil_list, null=True, blank=True, max_length=40)
     satchet_tomatoe = models.CharField(choices=tomatoe_satchet_list, null=True, blank=True, max_length=40)

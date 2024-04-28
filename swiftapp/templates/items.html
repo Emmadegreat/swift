@@ -193,7 +193,7 @@
                                 {% endfor %}
                             </div>
                             <div class="form-group" id="yam">
-                                {{ form.yam_tubers.label_tag }}
+                                <span>{{ form.yam_tubers.label_tag }}out of stock</span>
                                 {{ form.yam_tubers}}
                                 {% for error in form.yam_tubers.errors %}
                                     <p class="text-danger">{{ error }}</p>
