@@ -254,6 +254,8 @@ ol li{
     }
     .items-table-header{
         flex-direction: column;
+    }
+    .items-table-header h4,  .items-table-header p{
         font-size: 0.8rem;
     }
 }
