@@ -1,7 +1,7 @@
 //TweenLite.defaultEase = Expo.easeOut;
 
-alert('hello');
-/*const contactCard = document.querySelectorAll(".contact-col");
+
+const contactCard = document.querySelectorAll(".contact-col");
 
 contactCard.forEach(card => {
     const contactcard = card.querySelector(".contact-card");
@@ -77,7 +77,7 @@ if (backtotop) {
     }
     window.addEventListener('load', ScrollBackToTop);
     window.addEventListener('scroll', ScrollBackToTop);
-};*/
+};
 
 /*
 
