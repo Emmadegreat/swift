@@ -1,7 +1,60 @@
 //TweenLite.defaultEase = Expo.easeOut;
-//alert('huuuuuuuuuuuu');
+
 //let pp = document.querySelector(".test").innerHTML = "Hello";
 //console.log(pp);
+
+
+let btn = document.getElementById('btn');
+let Notavailable = document.querySelectorAll('.not-available');
+let addFieldBtn = document.getElementById('add-field');
+let formFields = document.getElementById('form-fields');
+
+Notavailable.forEach(element => {
+    element.style.display = 'none';
+    element.style.color='red';
+});
+
+
+btn.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    Notavailable.forEach(element => {
+        if (element.style.display === "none") {
+            element.style.display = "block";
+        } else {
+            element.style.display = "none";
+        }
+    });
+
+})
+
+addFieldBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    let newField = document.createElement('div');
+    newField.classList.add('form-group');
+    newField.innerHTML = `
+        <label for="new-field">New Field:</label>
+        <select name="new_field" id="new-field" class="form-control">
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+            <!-- Add more options as needed -->
+        </select>
+    `;
+    formFields.appendChild(newField);
+})
+
+//btn.addEventListener('click', (e) => {
+    //e.preventDefault();
+    //am.style.backgroundColor = 'red';
+    //if (yam.style.display = 'none') {
+        //yam.style.display = 'block';
+    //}
+//});
+
+//lert('huuuuuuuuuuuu');
+
 const contactCard = document.querySelectorAll(".contact-col");
 
 contactCard.forEach(card => {
