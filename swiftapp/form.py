@@ -114,6 +114,8 @@ class UserItemForm(forms.ModelForm):
 
     #user = forms.IntegerField(widget=forms.HiddenInput())
 
+    def set_dynamic_choices(self, field_name, choices):
+        self.fields[field_name] = forms.ChoiceField(label=field_name,choices=choices,widget=forms.Select(attrs={'class':'form-control'}))
     class Meta:
         model = UserItems
         fields = ('yam_tubers', 'white_garri_ijebu', 'white_garri_bendel', 'yellow_garri', 'nig_rice', 'foreign_rice_small_grain', 'foreign_rice_big_grain','honey_beans',
@@ -121,5 +123,4 @@ class UserItemForm(forms.ModelForm):
                 'indomie_chicken', 'chikki_noodles', 'mimee_noodles', 'veg_oil', 'satchet_tomatoe', 'tin_tomatoe_220g', 'tin_tomatoe_450g', 'semo'
                 )
 
-    def add_dynamic_fields(self, field_name,field_value):
-        self.fields[field_name] = forms.CharField(label=field_name,initial=field_value,widget=forms.TextInput(attrs={'class':'form-control'}))
+
