@@ -36,17 +36,7 @@
 
                         {% csrf_token %}
 
-                        {% for field in form %}
 
-                            <div class="form-group">
-                                {{ field.label_tag }}
-                                {{ field }}
-                                {% for error in field.errors %}
-                                    <p class="text-danger">{{ error }}</p>
-                                {% endfor %}
-                            </div>
-
-                        {% endfor %}
                         <!--<div class="form-group">
                                 {{ form.as_p}}
                                 {% for error in form.errors %}
@@ -54,7 +44,7 @@
                                 {% endfor %}
                             </div>-->
 
-                        <!--<div class="wrapper" id="form-fields">
+                        <div class="wrapper" id="form-fields">
 
                             <div class="form-group">
                                 {{ form.white_garri_ijebu.label_tag }}
@@ -288,7 +278,7 @@
                                     {% endfor %}
 
                                 </div>
-                            </div>-->
+                            </div>
 
                         <button type="submit" class="btn btn-success w-100 mb-3 mt-4" width="100%">Submit</button>
                     </form>
