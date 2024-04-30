@@ -196,9 +196,9 @@
                             <div class="form-group" id="yam">
                                 <span>{{ form.yam_tubers.label_tag }}<small class="text-danger"> Out of stock</small></span>
                                 {{ form.yam_tubers}}
-                                <!--{% for error in form.yam_tubers.errors %}
+                                {% for error in form.yam_tubers.errors %}
                                     <p class="text-danger">{{ error }}</p>
-                                {% endfor %}-->
+                                {% endfor %}
                             </div>
                             <div class="form-group">
                                 {{ form.red_oil.label_tag }}
@@ -248,7 +248,7 @@
 
 
                         </div>
-                        <!--<div class="mt-8"><br>
+                        <div class="mt-8"><br>
                             <p class="btn btn-success text-light" id="see-more">See more</p>
                         </div><br>
 
@@ -262,13 +262,16 @@
                                 <option value="2-bags">2-bags</option>
                             </select>
                             <div class="form-group" id="yam" disabled>
-                                <span>{{ form.yam_tubers.label_tag }}<small class="text-danger"> Out of stock</small></span>
-                                {{ form.yam_tubers}}
-                                {% for error in form.yam_tubers.errors %}
-                                    <p class="text-danger">{{ error }}</p>
-                                {% endfor %}
+                                <span><label for="Semo">Yam-tubers: </label><small class="text-danger"><small class="text-danger"> Out of stock</small></span>
+                                <select name="Semo" class="form-group" disabled>Semo
+                                <option value=""></option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
                             </div>
-                        </div>-->
+                        </div>
 
 
 

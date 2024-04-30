@@ -115,9 +115,9 @@ class UserItemForm(forms.ModelForm):
 
     #user = forms.IntegerField(widget=forms.HiddenInput())
 
-    def __init__(self, *args, **kwargs):
+    '''def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.fields['yam_tubers'].widget.attrs['disabled'] = True
+        self.fields['yam_tubers'].widget.attrs['disabled'] = True'''
 
     #def set_dynamic_choices(self, field_name, choices):
         #self.fields[field_name] = forms.ChoiceField(label=field_name,choices=choices,widget=forms.Select(attrs={'class':'form-control'}))
