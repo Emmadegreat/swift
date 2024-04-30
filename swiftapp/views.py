@@ -66,7 +66,7 @@ def Login(request):
 
 @login_required(login_url='/login')
 def items(request):
-    form = UserItemForm()
+    #form = UserItemForm()
 
     if UserItems.objects.filter(user=request.user).exists():
         messages.success(request, f'You have already added items')
