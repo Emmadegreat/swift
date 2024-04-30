@@ -218,6 +218,13 @@ ol li{
     gap: 15px;
 }
 
+.see-more{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+
 @media screen and (max-width:1024px) {
     .wrapper{
         display: grid;
@@ -257,6 +264,10 @@ ol li{
     }
     .items-table-header h4,  .items-table-header p{
         font-size: 0.8rem;
+    }
+
+    .see-more{
+        flex-direction: column;
     }
 }
 
