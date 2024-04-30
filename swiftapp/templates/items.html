@@ -193,13 +193,13 @@
                                     <p class="text-danger">{{ error }}</p>
                                 {% endfor %}
                             </div>
-                            <div class="form-group" id="yam">
+                            <!--<div class="form-group" id="yam">
                                 <span>{{ form.yam_tubers.label_tag }}<small class="text-danger"> Out of stock</small></span>
                                 {{ form.yam_tubers}}
                                 {% for error in form.yam_tubers.errors %}
                                     <p class="text-danger">{{ error }}</p>
                                 {% endfor %}
-                            </div>
+                            </div>-->
                             <div class="form-group">
                                 {{ form.red_oil.label_tag }}
                                 {{ form.red_oil}}
@@ -252,8 +252,8 @@
                             <p class="btn btn-success text-light" id="see-more">See more</p>
                         </div><br>
 
-                        <div class="mt-8 form-group" id="see-more-cont">
-                            <p><label for="Semo">Semo: </label><small class="text-danger"> Out of stock</small></p>
+                        <div class="mt-8 see-more" id="see-more-cont">
+                            <p clas="pb-0"><label for="Semo">Semo: </label><small class="text-danger"> Out of stock</small></p>
                             <select name="Semo" class="form-group" disabled>Semo
                                 <option value=""></option>
                                 <option value="Quarter(0.25)">Quarter(0.25)</option>
@@ -261,14 +261,14 @@
                                 <option value="1-bag">1-carton</option>
                                 <option value="2-bags">2-bags</option>
                             </select>
-                            <div class="form-group" id="yam" disabled>
-                                <span><label for="Semo">Yam-tubers: </label><small class="text-danger"><small class="text-danger"> Out of stock</small></span>
-                                <select name="Semo" class="form-group" disabled>Semo
+
+                            <p><label for="Semo">Yam-tubers: </label><small class="text-danger"><small class="text-danger"> Out of stock</small></p>
+                            <select name="Semo" class="form-group" disabled>Semo
                                 <option value=""></option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
+                                <option value="1">one yam tuber</option>
+                                <option value="2">two yam tubes</option>
+                                <option value="3">three yam tubes</option>
+                                <option value="4">four yam tubes</option>
                             </select>
                             </div>
                         </div>

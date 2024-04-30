@@ -153,7 +153,7 @@ def export_excel(request):
     columns = [
         "Name", "Garri(white-Ijebu)", "Garri(white-Bendel)","Garri(yellow)","Rice(Nig)","Rice(foreign-small-grain)","Rice(foreign-big-grain)","Beans(honey)",
         "Beans(drum)","Beans(pelebe)","Onions(big-size)","Onions(gen-size)","Spag(auntyB)","Spag(Gpenny)","Spag(crown)","Spag(dangote)",
-        "Noodles(indomie-oriental)","Noodles(indomie-chicken)","Noodles(chikki-chicken)","Noodles(mimee-chicken)","Yam","Red-oil",
+        "Noodles(indomie-oriental)","Noodles(indomie-chicken)","Noodles(chikki-chicken)","Noodles(mimee-chicken)","Red-oil",
         "Veg-oil","Satchet-tomatoe","Tin-tomatoe(220g)","Tin-tomatoe(450g)","Semo"
     ]
 
@@ -189,13 +189,13 @@ def export_excel(request):
         ws.write(row_num, 17, user.indomie_chicken, font_style)
         ws.write(row_num, 18, user.chikki_noodles, font_style)
         ws.write(row_num, 19, user.mimee_noodles, font_style)
-        ws.write(row_num, 20, user.yam_tubers, font_style)
-        ws.write(row_num, 21, user.red_oil, font_style)
-        ws.write(row_num, 22, user.veg_oil,font_style)
-        ws.write(row_num, 23, user.satchet_tomatoe, font_style)
-        ws.write(row_num, 24, user.tin_tomatoe_220g, font_style)
-        ws.write(row_num, 25, user.tin_tomatoe_450g, font_style)
-        ws.write(row_num, 26, user.semo, font_style)
+        #ws.write(row_num, 20, user.yam_tubers, font_style)
+        ws.write(row_num, 20, user.red_oil, font_style)
+        ws.write(row_num, 21, user.veg_oil,font_style)
+        ws.write(row_num, 22, user.satchet_tomatoe, font_style)
+        ws.write(row_num, 23, user.tin_tomatoe_220g, font_style)
+        ws.write(row_num, 24, user.tin_tomatoe_450g, font_style)
+        ws.write(row_num, 25, user.semo, font_style)
 
     wb.save(response)
     return response

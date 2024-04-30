@@ -74,8 +74,8 @@ class UserItemForm(forms.ModelForm):
     onions_list = [('',''),('Quarter(0.25)','Quarter(0.25)'), ('Half(0.5)','Half(0.5)'),('3-quarter(0.75)','3-quarter(0.75)'),('1', '1'), ('No','No')]
     spaghetti_list = [('',''),('Half(0.5)','Half(0.5)'), ('1-Carton','1-Carton'), ('2-Cartons','2-Cartons'), ('3-Cartons','3-Cartons'),('No','No')]
     noodle_list = [('',''),('1-carton','1-Carton'), ('2-Cartons','2-Cartons'),('3-Cartons','3-Cartons'),('No','No')]
-    yam_list = [('', ''), ('1', '1'), ('2', '2'), ('3', '3'), ('4','4'), ('5', '5'), ('6', '6'), ('7','7'), ('8', '8'),\
-        ('9', '9'), ('10', '10'), ('11','11'), ('12','12'), ('13','13'), ('No','No'), ('not-available', 'not-available'), ]
+    #yam_list = [('', ''), ('1', '1'), ('2', '2'), ('3', '3'), ('4','4'), ('5', '5'), ('6', '6'), ('7','7'), ('8', '8'),\
+        #('9', '9'), ('10', '10'), ('11','11'), ('12','12'), ('13','13'), ('No','No'), ('not-available', 'not-available'), ]
     red_oil_list = [('',''),('Quarter(0.25)','Quarter(0.25)'), ('Half(0.5)','Half(0.5)'),('1','1'),('2','2'),('No','No')]
     veg_oil_list = [('',''),('Quarter(0.25)','Quarter(0.25)'), ('Half(0.5)','Half(0.5)'),('1','1'),('2','2'),('No','No')]
     tomatoe_satchet_list = [('',''),('1-carton','1-carton'),('2-cartons','2-cartons'),('3-cartons','3-cartons'),('No','No')]
@@ -104,7 +104,7 @@ class UserItemForm(forms.ModelForm):
     indomie_chicken = forms.ChoiceField(label="Noodles-indomie-chicken", choices=noodle_list, widget=forms.Select(attrs={'class':'form-control'}))
     chikki_noodles = forms.ChoiceField(label="Noodles-chikki-chicken", choices=noodle_list, widget=forms.Select(attrs={'class':'form-control'}))
     mimee_noodles = forms.ChoiceField(label="Noodles-mimee-chicken", choices=noodle_list, widget=forms.Select(attrs={'class':'form-control'}))
-    yam_tubers = forms.ChoiceField(label="Yam-tubers", choices=yam_list, widget=forms.Select(attrs={'class': 'form-control'}))
+    #yam_tubers = forms.ChoiceField(label="Yam-tubers", choices=yam_list, widget=forms.Select(attrs={'class': 'form-control'}))
     red_oil = forms.ChoiceField(label="Red-oil", choices=red_oil_list, widget=forms.Select(attrs={'class': 'form-control'}))
     veg_oil = forms.ChoiceField(label="Vegetable-oil", choices=veg_oil_list, widget=forms.Select(attrs={'class': 'form-control'}))
     satchet_tomatoe = forms.ChoiceField(label="Satchet-tomatoe", choices=tomatoe_satchet_list, widget=forms.Select(attrs={'class': 'form-control'}))
@@ -123,7 +123,7 @@ class UserItemForm(forms.ModelForm):
         #self.fields[field_name] = forms.ChoiceField(label=field_name,choices=choices,widget=forms.Select(attrs={'class':'form-control'}))
     class Meta:
         model = UserItems
-        fields = ('yam_tubers', 'white_garri_ijebu', 'white_garri_bendel', 'yellow_garri', 'nig_rice', 'foreign_rice_small_grain', 'foreign_rice_big_grain','honey_beans',
+        fields = ('white_garri_ijebu', 'white_garri_bendel', 'yellow_garri', 'nig_rice', 'foreign_rice_small_grain', 'foreign_rice_big_grain','honey_beans',
                 'drum_beans', 'pelebe_beans', 'onions_big_size', 'onions_gen_size', 'red_oil','aunty_b_spag','g_penny_spag', 'crown_spag', 'dangote_spag','indomie_oriental',
                 'indomie_chicken', 'chikki_noodles', 'mimee_noodles', 'veg_oil', 'satchet_tomatoe', 'tin_tomatoe_220g', 'tin_tomatoe_450g', 'semo'
                 )
