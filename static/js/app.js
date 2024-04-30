@@ -1,5 +1,17 @@
 //TweenLite.defaultEase = Expo.easeOut;
 
+let See_more = document.getElementById('see-more');
+let See_more_cont = document.getElementById('see-more-cont');
+See_more_cont.style.display = 'none';
+
+See_more.addEventListener('click', () => {
+
+    if (See_more_cont.style.display == 'none') {
+        See_more_cont.style.display = 'block';
+    } else {
+        See_more_cont.style.display = 'none';
+    }
+});
 
 const contactCard = document.querySelectorAll(".contact-col");
 
