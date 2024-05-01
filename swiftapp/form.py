@@ -80,7 +80,7 @@ class UserItemForm(forms.ModelForm):
     veg_oil_list = [('',''),('Quarter(0.25)','Quarter(0.25)'), ('Half(0.5)','Half(0.5)'),('1','1'),('2','2'),('No','No')]
     tomatoe_satchet_list = [('',''),('1-carton','1-carton'),('2-cartons','2-cartons'),('3-cartons','3-cartons'),('No','No')]
     tomatoe_list = [('',''),('Quarter(0.25)','Quarter(0.25)'),('Half(0.5)','Half(0.5)'),('1','1'),('2','2'),('No','No')]
-    semo_list = [('',''),('1-bag','1-bag'),('2-bag','2-bag'),('2-bag','2-bag'), ('No','No')]
+    semo_list = [('',''),('1-bag','1-bag'),('2-bag','2-bag'),('3-bag','3-bag'), ('No','No')]
     #duration_list = [('',''),('1st Quarter','1st Quarter'), ('2nd Quarter','2nd Quarter'), ('3rd Quarter','3rd Quarter'), ('4th Quarter','4th Quarter')]
 
 

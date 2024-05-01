@@ -1,15 +1,21 @@
 //TweenLite.defaultEase = Expo.easeOut;
 
-let See_more = document.getElementById('see-more');
+let See_more_btn = document.getElementById('see-more-btn');
 let See_more_cont = document.getElementById('see-more-cont');
 See_more_cont.style.display = 'none';
 
-See_more.addEventListener('click', () => {
+See_more_btn.addEventListener('click', () => {
 
     if (See_more_cont.style.display == 'none') {
         See_more_cont.style.display = 'block';
     } else {
         See_more_cont.style.display = 'none';
+    }
+
+    if (See_more_btn.textContent === 'See more') {
+        See_more_btn.textContent = 'See less';
+    } else {
+        See_more_btn.textContent = 'See more';
     }
 });
 

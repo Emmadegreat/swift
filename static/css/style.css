@@ -224,6 +224,14 @@ ol li{
     gap: 15px;
 }
 
+.see-more select{
+    height: 36px;
+    width: 32%;
+    margin-bottom: 1rem;
+}
+.see-more p{
+    margin-bottom: 0rem;
+}
 
 @media screen and (max-width:1024px) {
     .wrapper{
