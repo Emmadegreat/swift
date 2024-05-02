@@ -1,5 +1,5 @@
-//TweenLite.defaultEase = Expo.easeOut;
-alert('yoooooooo');
+
+//alert('yoooooooo');
 var date = new Date()
 
 var time = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
@@ -34,7 +34,6 @@ function toggleSeeMore() {
 
 See_more_btn.addEventListener('click', toggleSeeMore);
 
-// Add a resize event listener to update layout dynamically
 window.addEventListener('resize', toggleSeeMore);
 
 
@@ -63,7 +62,7 @@ col.forEach(card => {
     const body = card.querySelector(".update-body");
     const paragraph = card.querySelector(".pa");
     const read_more = card.querySelector(".read-more");
-    //read_more.style.color = "#0d6efd";
+    read_more.style.color = "red";
     cards.addEventListener("mouseenter", (e) => {
         e.preventDefault();
 
@@ -157,37 +156,3 @@ addFieldBtn.addEventListener("click", (e) => {
 
 
 */
-
-/*function toggleSeeMore(width) {
-    if (See_more_cont.style.display === 'none') {
-        See_more_cont.style.display = 'grid';
-
-        if (width <= 1024) {
-            See_more_cont.style.gridTemplateColumns = width <= 600 ? 'repeat(1, 1fr)' : 'repeat(2, 1fr)';
-        } else {
-            See_more_cont.style.gridTemplateColumns = 'repeat(3, 1fr)';
-        }
-    } else {
-        See_more_cont.style.display = 'none';
-    }
-
-    See_more_btn.textContent = See_more_btn.textContent === 'See more' ? 'See less' : 'See more';
-}
-
-function toggleSeeMoreOnClick() {
-    toggleSeeMore(window.innerWidth);
-}
-
-function toggleSeeMoreOnResize() {
-    toggleSeeMore(window.innerWidth);
-}
-
-See_more_btn.addEventListener('click', toggleSeeMoreOnClick);
-window.addEventListener('resize', toggleSeeMoreOnResize);
-
-// Call the function on page load to set initial layout
-toggleSeeMore(window.innerWidth);*/
-
-
-
-
