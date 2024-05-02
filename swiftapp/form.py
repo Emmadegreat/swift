@@ -87,7 +87,7 @@ class UserItemForm(forms.ModelForm):
 
     white_garri_ijebu = forms.ChoiceField(label='White-garri-Ijebu', choices=garri_list, widget=forms.Select(attrs={'class': 'form-control'}))
     white_garri_bendel = forms.ChoiceField(label='White-garri-Bendel', choices=garri_list, widget=forms.Select(attrs={'class': 'form-control'}))
-    yellow_garri_bendel = forms.ChoiceField(label='Yellow-garri', choices=garri_list, widget=forms.Select(attrs={'class': 'form-control'}))
+    yellow_garri_bendel = forms.ChoiceField(label='Yellow-garri-bendel', choices=garri_list, widget=forms.Select(attrs={'class': 'form-control'}))
     nig_rice = forms.ChoiceField(label="Nigerian-rice", choices=rice_list, widget=forms.Select(attrs={'class':'form-control'}))
     foreign_rice_small_grain = forms.ChoiceField(label="Foreign-rice-small-grain", choices=rice_list, widget=forms.Select(attrs={'class':'form-control'}))
     foreign_rice_big_grain = forms.ChoiceField(label="Foreign-rice-big-grain", choices=rice_list, widget=forms.Select(attrs={'class':'form-control'}))
