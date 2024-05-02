@@ -10,9 +10,9 @@ function toggleSeeMore() {
         See_more_cont.style.display = 'grid';
 
         if (window.innerWidth <= 1024) {
-            See_more_cont.style.gridTemplateColumns = 'repeat(2, 1fr)';
+            See_more_cont.style.gridTemplateColumns = 'repeat(1, 1fr)';
 
-        }else if (window.innerWidth <= 600) {
+        }else if(window.innerWidth <= 600) {
             See_more_cont.style.gridTemplateColumns = 'repeat(1, 1fr)';
 
         } else {
