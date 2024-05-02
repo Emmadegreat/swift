@@ -66,15 +66,15 @@ col.forEach(card => {
     cards.addEventListener("mouseenter", (e) => {
         e.preventDefault();
 
-        if (body.style.backgroundColor = "#f8f9fa") {
+        if (body.style.backgroundColor === "#f8f9fa") {
             body.style.backgroundColor = "#198754";
         }
 
-        if (paragraph.style.color = "#000") {
+        if (paragraph.style.color === "#000") {
             paragraph.style.color = "#fff";
         }
 
-        if (read_more.style.color = "#f8f9fa") {
+        if (read_more.style.color === "#f8f9fa") {
             read_more.style.color = "#198754";
             read_more.style.backgroundColor = "#fff";
         }
@@ -82,15 +82,15 @@ col.forEach(card => {
 
     cards.addEventListener("mouseleave", (e) => {
         e.preventDefault();
-        if (body.style.backgroundColor = "#198754") {
+        if (body.style.backgroundColor === "#198754") {
             body.style.backgroundColor = "#f8f9fa";
         }
 
-        if (paragraph.style.color = "#fff") {
+        if (paragraph.style.color === "#fff") {
             paragraph.style.color = "#000";
         }
 
-        if (read_more.style.color = "#198754") {
+        if (read_more.style.color === "#198754") {
             read_more.style.color = "#198754";
             read_more.style.backgroundColor = "#f8f9fa";
         }
