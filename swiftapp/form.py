@@ -71,16 +71,16 @@ class UserItemForm(forms.ModelForm):
     garri_list = [('',''),('Quarter(0.25)','Quarter(0.25)'), ('Half(0.5)','Half(0.5)'),('1-bag','1-bag'),('2-bag','2-bag'),('No','No')]
     rice_list = [('',''),('Quarter(0.25)','Quarter(0.25)'), ('Half(0.5)','Half(0.5)'),('1-bag','1-bag'),('2-bags','2-bags'),('No','No')]
     beans_list = [('',''),('Quarter(0.25)','Quarter(0.25)'), ('Half(0.5)','Half(0.5)'),('1-bag','1-bag'),('No','No')]
-    onions_list = [('',''),('Quarter(0.25)','Quarter(0.25)'), ('Half(0.5)','Half(0.5)'),('3-quarter(0.75)','3-quarter(0.75)'),('1', '1'), ('No','No')]
-    spaghetti_list = [('',''),('Half(0.5)','Half(0.5)'), ('1-Carton','1-Carton'), ('2-Cartons','2-Cartons'), ('3-Cartons','3-Cartons'),('No','No')]
-    noodle_list = [('',''),('1-carton','1-Carton'), ('2-Cartons','2-Cartons'),('3-Cartons','3-Cartons'),('No','No')]
-    #yam_list = [('', ''), ('1', '1'), ('2', '2'), ('3', '3'), ('4','4'), ('5', '5'), ('6', '6'), ('7','7'), ('8', '8'),\
-        #('9', '9'), ('10', '10'), ('11','11'), ('12','12'), ('13','13'), ('No','No'), ('not-available', 'not-available'), ]
     red_oil_list = [('',''),('Quarter(0.25)','Quarter(0.25)'), ('Half(0.5)','Half(0.5)'),('1','1'),('2','2'),('No','No')]
     veg_oil_list = [('',''),('Quarter(0.25)','Quarter(0.25)'), ('Half(0.5)','Half(0.5)'),('1','1'),('2','2'),('No','No')]
-    tomatoe_satchet_list = [('',''),('1-carton','1-carton'),('2-cartons','2-cartons'),('3-cartons','3-cartons'),('No','No')]
-    tomatoe_list = [('',''),('Quarter(0.25)','Quarter(0.25)'),('Half(0.5)','Half(0.5)'),('1','1'),('2','2'),('No','No')]
-    semo_list = [('',''),('1-bag','1-bag'),('2-bag','2-bag'),('3-bag','3-bag'), ('No','No')]
+    #onions_list = [('',''),('Quarter(0.25)','Quarter(0.25)'), ('Half(0.5)','Half(0.5)'),('3-quarter(0.75)','3-quarter(0.75)'),('1', '1'), ('No','No')]
+    #spaghetti_list = [('',''),('Half(0.5)','Half(0.5)'), ('1-Carton','1-Carton'), ('2-Cartons','2-Cartons'), ('3-Cartons','3-Cartons'),('No','No')]
+    #noodle_list = [('',''),('1-carton','1-Carton'), ('2-Cartons','2-Cartons'),('3-Cartons','3-Cartons'),('No','No')]
+    #yam_list = [('', ''), ('1', '1'), ('2', '2'), ('3', '3'), ('4','4'), ('5', '5'), ('6', '6'), ('7','7'), ('8', '8'),\
+        #('9', '9'), ('10', '10'), ('11','11'), ('12','12'), ('13','13'), ('No','No'), ('not-available', 'not-available'), ]
+    #tomatoe_satchet_list = [('',''),('1-carton','1-carton'),('2-cartons','2-cartons'),('3-cartons','3-cartons'),('No','No')]
+    #tomatoe_list = [('',''),('Quarter(0.25)','Quarter(0.25)'),('Half(0.5)','Half(0.5)'),('1','1'),('2','2'),('No','No')]
+    #semo_list = [('',''),('1-bag','1-bag'),('2-bag','2-bag'),('3-bag','3-bag'), ('No','No')]
     #duration_list = [('',''),('1st Quarter','1st Quarter'), ('2nd Quarter','2nd Quarter'), ('3rd Quarter','3rd Quarter'), ('4th Quarter','4th Quarter')]
 
 
@@ -94,23 +94,24 @@ class UserItemForm(forms.ModelForm):
     honey_beans = forms.ChoiceField(label="Honey-beans", choices=beans_list, widget=forms.Select(attrs={'class':'form-control'}))
     drum_beans = forms.ChoiceField(label="Drum-beans", choices=beans_list, widget=forms.Select(attrs={'class':'form-control'}))
     pelebe_beans = forms.ChoiceField(label="Pelebe-beans", choices=beans_list, widget=forms.Select(attrs={'class':'form-control'}))
-    onions_big_size = forms.ChoiceField(label="Onions-big-size", choices=onions_list, widget=forms.Select(attrs={'class':'form-control'}))
-    onions_gen_size = forms.ChoiceField(label="Onions-general-size", choices=onions_list, widget=forms.Select(attrs={'class':'form-control'}))
-    aunty_b_spag = forms.ChoiceField(label="Aunty-b-spaghetti",choices=spaghetti_list, widget=forms.Select(attrs={'class':'form-control'}))
-    g_penny_spag = forms.ChoiceField(label="Golden-penny-spaghetti",choices=spaghetti_list, widget=forms.Select(attrs={'class':'form-control'}))
-    crown_spag = forms.ChoiceField(label="Crown-spaghetti",choices=spaghetti_list, widget=forms.Select(attrs={'class':'form-control'}))
-    dangote_spag = forms.ChoiceField(label="Dangote-spaghetti",choices=spaghetti_list, widget=forms.Select(attrs={'class':'form-control'}))
-    indomie_oriental = forms.ChoiceField(label="Noodles-indomie-oriental", choices=noodle_list, widget=forms.Select(attrs={'class':'form-control'}))
-    indomie_chicken = forms.ChoiceField(label="Noodles-indomie-chicken", choices=noodle_list, widget=forms.Select(attrs={'class':'form-control'}))
-    chikki_noodles = forms.ChoiceField(label="Noodles-chikki-chicken", choices=noodle_list, widget=forms.Select(attrs={'class':'form-control'}))
-    mimee_noodles = forms.ChoiceField(label="Noodles-mimee-chicken", choices=noodle_list, widget=forms.Select(attrs={'class':'form-control'}))
-    #yam_tubers = forms.ChoiceField(label="Yam-tubers", choices=yam_list, widget=forms.Select(attrs={'class': 'form-control'}))
     red_oil = forms.ChoiceField(label="Red-oil", choices=red_oil_list, widget=forms.Select(attrs={'class': 'form-control'}))
     veg_oil = forms.ChoiceField(label="Vegetable-oil", choices=veg_oil_list, widget=forms.Select(attrs={'class': 'form-control'}))
-    satchet_tomatoe = forms.ChoiceField(label="Satchet-tomatoe", choices=tomatoe_satchet_list, widget=forms.Select(attrs={'class': 'form-control'}))
-    tin_tomatoe_220g = forms.ChoiceField(label="Tin-tomatoe-220g", choices=tomatoe_list, widget=forms.Select(attrs={'class': 'form-control'}))
-    tin_tomatoe_450g = forms.ChoiceField(label="Tin-tomatoe-450g", choices=tomatoe_list, widget=forms.Select(attrs={'class': 'form-control'}))
-    semo = forms.ChoiceField(label="Semo", choices=semo_list, widget=forms.Select(attrs={'class': 'form-control'}))
+
+    #onions_big_size = forms.ChoiceField(label="Onions-big-size", choices=onions_list, widget=forms.Select(attrs={'class':'form-control'}))
+    #onions_gen_size = forms.ChoiceField(label="Onions-general-size", choices=onions_list, widget=forms.Select(attrs={'class':'form-control'}))
+    #aunty_b_spag = forms.ChoiceField(label="Aunty-b-spaghetti",choices=spaghetti_list, widget=forms.Select(attrs={'class':'form-control'}))
+    #g_penny_spag = forms.ChoiceField(label="Golden-penny-spaghetti",choices=spaghetti_list, widget=forms.Select(attrs={'class':'form-control'}))
+    #crown_spag = forms.ChoiceField(label="Crown-spaghetti",choices=spaghetti_list, widget=forms.Select(attrs={'class':'form-control'}))
+    #dangote_spag = forms.ChoiceField(label="Dangote-spaghetti",choices=spaghetti_list, widget=forms.Select(attrs={'class':'form-control'}))
+    #indomie_oriental = forms.ChoiceField(label="Noodles-indomie-oriental", choices=noodle_list, widget=forms.Select(attrs={'class':'form-control'}))
+    #indomie_chicken = forms.ChoiceField(label="Noodles-indomie-chicken", choices=noodle_list, widget=forms.Select(attrs={'class':'form-control'}))
+    #chikki_noodles = forms.ChoiceField(label="Noodles-chikki-chicken", choices=noodle_list, widget=forms.Select(attrs={'class':'form-control'}))
+    #mimee_noodles = forms.ChoiceField(label="Noodles-mimee-chicken", choices=noodle_list, widget=forms.Select(attrs={'class':'form-control'}))
+    #satchet_tomatoe = forms.ChoiceField(label="Satchet-tomatoe", choices=tomatoe_satchet_list, widget=forms.Select(attrs={'class': 'form-control'}))
+    #tin_tomatoe_220g = forms.ChoiceField(label="Tin-tomatoe-220g", choices=tomatoe_list, widget=forms.Select(attrs={'class': 'form-control'}))
+    #tin_tomatoe_450g = forms.ChoiceField(label="Tin-tomatoe-450g", choices=tomatoe_list, widget=forms.Select(attrs={'class': 'form-control'}))
+    #semo = forms.ChoiceField(label="Semo", choices=semo_list, widget=forms.Select(attrs={'class': 'form-control'}))
+    #yam_tubers = forms.ChoiceField(label="Yam-tubers", choices=yam_list, widget=forms.Select(attrs={'class': 'form-control'}))
     #duration = forms.ChoiceField(label="Duration",choices=duration_list, widget=forms.Select(attrs={'class':'form-control'}))
 
     #user = forms.IntegerField(widget=forms.HiddenInput())
@@ -124,8 +125,9 @@ class UserItemForm(forms.ModelForm):
     class Meta:
         model = UserItems
         fields = ('white_garri_ijebu', 'white_garri_bendel', 'yellow_garri', 'nig_rice', 'foreign_rice_small_grain', 'foreign_rice_big_grain','honey_beans',
-                'drum_beans', 'pelebe_beans', 'onions_big_size', 'onions_gen_size', 'red_oil','aunty_b_spag','g_penny_spag', 'crown_spag', 'dangote_spag','indomie_oriental',
-                'indomie_chicken', 'chikki_noodles', 'mimee_noodles', 'veg_oil', 'satchet_tomatoe', 'tin_tomatoe_220g', 'tin_tomatoe_450g', 'semo'
+                'drum_beans', 'pelebe_beans', 'red_oil','veg_oil'
                 )
 
+    """( 'onions_big_size', 'onions_gen_size', 'aunty_b_spag','g_penny_spag', 'crown_spag', 'dangote_spag',
+    'indomie_oriental','indomie_chicken', 'chikki_noodles', 'mimee_noodles', 'satchet_tomatoe', 'tin_tomatoe_220g', 'tin_tomatoe_450g', 'semo','yam_tubers') """
 
