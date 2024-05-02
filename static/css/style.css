@@ -218,15 +218,22 @@ ol li{
     gap: 15px;
 }
 
-.see-more{
+/*.see-more{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
+}*/
+
+.see-more{
+
+    /*display: grid !important;
+    grid-template-columns: repeat(3, 1fr);
+    border: 1px solid red*/
 }
 
 .see-more select{
     height: 36px;
-    width: 32%;
+    width: 96% !important;
     margin-bottom: 1rem;
 }
 .see-more p{
@@ -238,6 +245,7 @@ ol li{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
+
 }
 
 
