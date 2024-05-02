@@ -88,7 +88,7 @@ class UserItems(models.Model):
     user = models.OneToOneField('SwiftUser', on_delete=models.CASCADE)
     white_garri_ijebu = models.CharField(choices=garri_list, null=True, blank=True, max_length=40)
     white_garri_bendel = models.CharField(choices=garri_list, null=True, blank=True, max_length=40)
-    yellow_garri = models.CharField(choices=garri_list, null=True, blank=True, max_length=40)
+    yellow_garri_bendel = models.CharField(choices=garri_list, null=True, blank=True, max_length=40)
     nig_rice = models.CharField(choices=rice_list, null=True, blank=True, max_length=40)
     foreign_rice_small_grain = models.CharField(choices=rice_list, null=True, blank=True, max_length=40)
     foreign_rice_big_grain = models.CharField(choices=rice_list, null=True, blank=True, max_length=40)
@@ -120,7 +120,7 @@ class UserItems(models.Model):
     def __str__(self):
         return (
             f"{self.user.email}- White_garri_ijebu: {self.white_garri_ijebu}, White_garri_bendel: {self.white_garri_bendel},"
-            f"Yellow_garri: {self.yellow_garri}, Nig_rice: {self.nig_rice}, Foreign_rice_small_grain: {self.foreign_rice_small_grain},"
+            f"Yellow_garri_bendel: {self.yellow_garri_bendel}, Nig_rice: {self.nig_rice}, Foreign_rice_small_grain: {self.foreign_rice_small_grain},"
             f"Foreign_rice_big_grain: {self.foreign_rice_big_grain},Honey_beans: {self.honey_beans}, Drum_beans: {self.drum_beans},""Pelebe_beans:{self.pelebe_beans},"
             f"Red_oil: {self.red_oil},Veg_oil: {self.veg_oil}"
 

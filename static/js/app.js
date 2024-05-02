@@ -1,4 +1,10 @@
 //TweenLite.defaultEase = Expo.easeOut;
+alert('yoooooooo');
+var date = new Date()
+
+var time = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
+document.getElementById('time').innerHTML = time;
+document.getElementById("date").innerHTML = new Date().toDateString();
 
 let See_more_btn = document.getElementById('see-more-btn');
 let See_more_cont = document.getElementById('see-more-cont');
@@ -47,11 +53,7 @@ contactCard.forEach(card => {
     })
 });
 
-var date = new Date()
 
-var time = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
-document.getElementById('time').innerHTML = time;
-document.getElementById("date").innerHTML = new Date().toDateString();
 
 
 const col = document.querySelectorAll(".update-col");
