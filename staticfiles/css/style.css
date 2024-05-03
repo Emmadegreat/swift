@@ -87,6 +87,14 @@ ol li{
     color: #198754;
 }
 
+.container1{
+    padding: 0rem 2.2rem;
+}
+
+.container1 p{
+    text-align: justify;
+}
+
 .not-found{
     margin-bottom: 4rem;
 }
@@ -201,6 +209,7 @@ ol li{
 
 .table{
     font-size: 0.9rem;
+
 }
 
 .admin-table-header, .items-table-header{
@@ -212,7 +221,7 @@ ol li{
     font-size: 0.7rem;
 }
 
-.wrapper{
+.wrapper, .see-more{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
@@ -229,7 +238,7 @@ ol li{
 }
 
 @media screen and (max-width:1024px) {
-    .wrapper{
+    .wrapper, .see-more{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
@@ -276,7 +285,7 @@ ol li{
 }
 
 @media screen and (max-width:600px) {
-    .wrapper{
+    .wrapper, .see-more{
         display: grid;
         grid-template-columns: repeat(1, 1fr);
     }
