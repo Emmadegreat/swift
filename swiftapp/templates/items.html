@@ -48,7 +48,8 @@
                         <div class="wrapper" id="form-fields">
 
                             <div class="form-group">
-                                {{ form.white_garri_ijebu.label_tag }}
+                                <p>{{ form.white_garri_ijebu.label_tag }}<small class="text-danger">₦66,000</small></p>
+
                                 {{ form.white_garri_ijebu}}
                                 {% for error in form.white_garri_ijebu.errors %}
                                     <p class="text-danger">{{ error }}</p>
@@ -293,7 +294,7 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <p><label for="yam">Golden-penny-spaghetti: </label><small class="text-danger"> Not available</small></p>
+                                <p><label for="yam">Golden-penny-spaghetti: </label><small class="text-danger">₦66,000 Not available</small></p>
                                 <select name="golden-penny-spaghetti" disabled>
                                     <option value=""></option>
                                     <option value="half(0.5)">half(0.5)</option>
