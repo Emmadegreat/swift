@@ -25,7 +25,7 @@
                     <!--<button type="button" class="btn btn-success" id="btn">show/hide</button>
                     <button type="button" class="btn btn-success" id="add-field">Add items</button>
                     <p class="text-danger hidden">Note: Any item labelled out of stock, kindly pick not available from the option.</p>-->
-                    <h5 class='text-dark'>Pick your preferred items here</h5>
+                    <p class='text-danger'>Note: The given prices are per bag and 25 liters.</p>
                 </div>
                 <div class="card-body">
                     <form method="POST" novalidate class="px-2 pb-3">
@@ -123,7 +123,7 @@
                                 {% endfor %}
                             </div>
                             <div class="form-group">
-                                <span>{{ form.veg_oil.label_tag }} <small class="text-danger"> ₦52,000<-25L</small></span>
+                                <span>{{ form.veg_oil.label_tag }} <small class="text-danger"> ₦52,000-25L</small></span>
                                 {{ form.veg_oil}}
                                 {% for error in form.veg_oil.errors %}
                                     <p class="text-danger">{{ error }}</p>
@@ -139,7 +139,7 @@
                             </div>
 
                             <div class="form-group">
-                                <span>{{ form.onions_gen_size.label_tag }} <small class="text-danger"> ₦45,000</small></span>
+                                <span>{{ form.onions_gen_size.label_tag }} <small class="text-danger"> ₦91,000</small></span>
                                 {{ form.onions_gen_size}}
                                 {% for error in form.onions_gen_size.errors %}
                                     <p class="text-danger">{{ error }}</p>
