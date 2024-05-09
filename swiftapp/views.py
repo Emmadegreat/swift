@@ -151,10 +151,11 @@ def export_excel(request):
     row_num = 0
 
     columns = [
-        "Name", "Garri(white-Ijebu)", "Garri(white-Bendel)","Garri(yellow-Bendel)","Rice(Nig)","Rice(foreign-small-grain)","Rice(foreign-big-grain)","Beans(honey)",
-        "Beans(drum)","Beans(pelebe)","Onions(big-size)","Onions(gen-size)","Spag(auntyB)","Spag(Gpenny)","Spag(crown)","Spag(dangote)",
-        "Noodles(indomie-oriental)","Noodles(indomie-chicken)","Noodles(chikki-chicken)","Noodles(mimee-chicken)","Red-oil",
-        "Veg-oil","Satchet-tomatoe","Tin-tomatoe(220g)","Tin-tomatoe(450g)","Semo"
+        "Name", "Garri(white-Ijebu)", "Garri(white-Bendel)","Garri(yellow-Bendel)","Rice(Nig)","Rice(foreign-small-grain)",
+        "Rice(foreign-big-grain)","Beans(honey)","Beans(drum)","Beans(pelebe)","Red-oil","Veg-oil","Onions(big-size)",
+        "Onions(gen-size)","Spag(auntyB)","Spag(Gpenny)","Spag(crown)","Spag(dangote)","Noodles(indomie-oriental)",
+        "Noodles(indomie-chicken)","Noodles(chikki-chicken)","Noodles(mimee-chicken)","Satchet-tomatoe","Tin-tomatoe(220g)",
+        "Tin-tomatoe(450g)","Semo", "yam-tubers"
     ]
 
     font_style = xlwt.XFStyle()
@@ -182,8 +183,8 @@ def export_excel(request):
         ws.write(row_num, 20, user.red_oil, font_style)
         ws.write(row_num, 21, user.veg_oil,font_style)
 
-        #ws.write(row_num, 10, user.onions_big_size, font_style)
-        #ws.write(row_num, 11, user.onions_gen_size, font_style)
+        ws.write(row_num, 10, user.onions_big_size, font_style)
+        ws.write(row_num, 11, user.onions_gen_size, font_style)
         #ws.write(row_num, 12, user.aunty_b_spag, font_style)
         #ws.write(row_num, 13, user.g_penny_spag, font_style)
         #ws.write(row_num, 14, user.crown_spag, font_style)

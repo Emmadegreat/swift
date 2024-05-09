@@ -75,7 +75,7 @@ class UserItems(models.Model):
     beans_list = [('',''),('Quarter(0.25)','Quarter(0.25)'), ('Half(0.5)','Half(0.5)'),('1-bag','1-bag'),('No','No')]
     red_oil_list = [('',''),('Quarter(0.25)','Quarter(0.25)'), ('Half(0.5)','Half(0.5)'),('1','1'),('2','2'),('No','No')]
     veg_oil_list = [('',''),('Quarter(0.25)','Quarter(0.25)'), ('Half(0.5)','Half(0.5)'),('1','1'),('2','2'),('No','No')]
-    #onions_list = [('',''),('Quarter(0.25)','Quarter(0.25)'), ('Half(0.5)','Half(0.5)'),('3-quarter(0.75)','3-quarter(0.75)'),('1', '1'), ('No','No')]
+    onions_list = [('',''),('Quarter(0.25)','Quarter(0.25)'), ('Half(0.5)','Half(0.5)'),('3-quarter(0.75)','3-quarter(0.75)'),('1', '1'), ('No','No')]
     #spaghetti_list = [('',''),('Half(0.5)','Half(0.5)'), ('1-Carton','1-Carton'), ('2-Cartons','2-Cartons'), ('3-Cartons','3-Cartons'),('No','No')]
     #noodle_list = [('',''),('1-carton','1-Carton'), ('2-Cartons','2-Cartons'),('3-Cartons','3-Cartons'),('No','No')]
     #yam_list = [('', ''), ('1', '1'), ('2', '2'), ('3', '3'), ('4','4'), ('5', '5'), ('6', '6'), \
@@ -98,8 +98,8 @@ class UserItems(models.Model):
     red_oil = models.CharField(choices=red_oil_list, null=True, blank=True, max_length=40)
     veg_oil = models.CharField(choices=veg_oil_list, null=True, blank=True, max_length=40)
 
-    #onions_big_size = models.CharField(choices=onions_list, null=True, blank=True, max_length=40)
-    #onions_gen_size = models.CharField(choices=onions_list, null=True, blank=True, max_length=40)
+    onions_big_size = models.CharField(choices=onions_list, null=True, blank=True, max_length=40)
+    onions_gen_size = models.CharField(choices=onions_list, null=True, blank=True, max_length=40)
     #aunty_b_spag = models.CharField(choices=spaghetti_list, null=True, blank=True, max_length=40)
     #g_penny_spag = models.CharField(choices=spaghetti_list, null=True, blank=True, max_length=40)
     #crown_spag = models.CharField(choices=spaghetti_list, null=True, blank=True, max_length=40)
@@ -121,11 +121,11 @@ class UserItems(models.Model):
         return (
             f"{self.user.email}- White_garri_ijebu: {self.white_garri_ijebu}, White_garri_bendel: {self.white_garri_bendel},"
             f"Yellow_garri_bendel: {self.yellow_garri_bendel}, Nig_rice: {self.nig_rice}, Foreign_rice_small_grain: {self.foreign_rice_small_grain},"
-            f"Foreign_rice_big_grain: {self.foreign_rice_big_grain},Honey_beans: {self.honey_beans}, Drum_beans: {self.drum_beans},""Pelebe_beans:{self.pelebe_beans},"
-            f"Red_oil: {self.red_oil},Veg_oil: {self.veg_oil}"
+            f"Foreign_rice_big_grain: {self.foreign_rice_big_grain}, Honey_beans: {self.honey_beans}, Drum_beans: {self.drum_beans},""Pelebe_beans:{self.pelebe_beans},"
+            f"Red_oil: {self.red_oil},Veg_oil: {self.veg_oil}, Onions_big_size: {self.onions_big_size}, Onions_gen_size: {self.onions_gen_size}"
 
         )
-        '''( Onions_big_size: {self.onions_big_size}, Onions_gen_size: {self.onions_gen_size},"
+        '''("
             f"Aunty_B_Spag: {self.aunty_b_spag}, G_penny_Spag: {self.g_penny_spag}, Crown_Spag: {self.crown_spag}, dangote_Spag: {self.dangote_spag},"
             f"Indomie_oriental: {self.indomie_oriental}, Indomie_chicken: {self.indomie_chicken}, Chikki_noodles: {self.chikki_noodles}, Mimee_noodles: {self.mimee_noodles},"
             f"Satchet_tomatoe: {self.satchet_tomatoe}, Tin_tomatoe_220g: {self.tin_tomatoe_220g}, Tin_tomatoe_450g: {self.tin_tomatoe_450g},Semo: {self.semo},"
