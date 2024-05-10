@@ -215,6 +215,7 @@ ol li{
 .admin-table-header, .items-table-header{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .table-head{
