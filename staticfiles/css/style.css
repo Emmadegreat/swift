@@ -215,6 +215,7 @@ ol li{
 .admin-table-header, .items-table-header{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .table-head{
@@ -226,7 +227,6 @@ ol li{
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
 }
-
 
 .see-more select{
     height: 36px;
