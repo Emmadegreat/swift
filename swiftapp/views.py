@@ -151,9 +151,9 @@ def export_excel(request):
     row_num = 0
 
     columns = [
-        "Name", "Garri(white-Ijebu)", "Garri(white-Bendel)","Garri(yellow-Bendel)","Rice(Nig)","Rice(foreign-small-grain)",
-        "Rice(foreign-big-grain)","Beans(honey)","Beans(drum)","Beans(pelebe)","Red-oil","Veg-oil","Onions(big-size)",
-        "Onions(gen-size)","Spag(auntyB)","Spag(Gpenny)","Spag(crown)","Spag(dangote)","Noodles(indomie-oriental)",
+        "Name", "Garri(white-Ijebu-₦66,000)", "Garri(white-Bendel-₦52,000)","Garri(yellow-Bendel-₦52,000)","Rice(Nigerian-₦67,000)","Rice(foreign-small-grain-₦70,000)",
+        "Rice(foreign-big-grain-₦75,000)","Beans(honey-₦91,000)","Beans(drum-₦180,000)","Beans(pelebe-₦160,000)","Red-oil-₦30,000","Veg-oil-₦52,000","Onions(big-size-₦45,000)",
+        "Onions(gen-size-₦91,000)","Spag(auntyB)","Spag(Gpenny)","Spag(crown)","Spag(dangote)","Noodles(indomie-oriental)",
         "Noodles(indomie-chicken)","Noodles(chikki-chicken)","Noodles(mimee-chicken)","Satchet-tomatoe","Tin-tomatoe(220g)",
         "Tin-tomatoe(450g)","Semo", "yam-tubers"
     ]
